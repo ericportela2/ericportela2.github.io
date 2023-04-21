@@ -9,6 +9,8 @@ Run website (locally): `bundle exec jekyll serve`
 
 # Troubleshooting: ERROR `/assets/css/style.css` not found?
 
+<img width="639" alt="Screenshot 2023-04-21 at 20 26 50" src="https://user-images.githubusercontent.com/58792679/233709170-13a2d5e2-df38-41cd-979f-6ffccb54ef6e.png">
+
 Background: 
 
 * The problem is that the linked path - to the css-file in all html-files under the folder "_includes" - is essentially not recognized/does not exist.
