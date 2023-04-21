@@ -1,13 +1,13 @@
 # imglib2-jekyll
 
 
-#Some Jekyll commands
+# Some Jekyll commands
 
 Install ruby gems: `bundle install`
 
 Run website (locally): `bundle exec jekyll serve`
 
-#Troubleshooting: ERROR `/assets/css/style.css` not found?
+# Troubleshooting: ERROR `/assets/css/style.css` not found?
 
 Background: 
 
