@@ -13,7 +13,7 @@ Run website (locally): `bundle exec jekyll serve`
 
 Background: 
 
-* The problem is that the linked path - to the css-file in all html-files under the folder "_includes" - is essentially not recognized/does not exist.
+* The problem is that the linked path to the css-file (in all html-files under the folder "_includes") is essentially not recognized/does not exist.
 
 
 Solution: 
