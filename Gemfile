@@ -7,16 +7,16 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll"
+gem "jekyll", "~> 3.9.3"
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 gem 'minima'
 # To upgrade, run `bundle update github-pages`.
-# gem "github-pages", group: :jekyll_plugins
+
+gem 'github-pages', '228', group: :jekyll_plugins
 # If you have any plugins, put them here!
-group :jekyll_plugins do
+ group :jekyll_plugins do
   gem "jekyll-feed"
   gem 'jekyll-octicons'
-  gem 'jekyll-remote-theme'
   gem "jekyll-twitter-plugin"
   gem 'jekyll-relative-links'
   gem 'jekyll-seo-tag'
@@ -25,8 +25,10 @@ group :jekyll_plugins do
   gem 'jekyll-paginate'
   gem 'jekyll-scholar'
   gem 'jekyll-sitemap'
+  gem 'sassc'
 end
 
+gem 'jekyll-remote-theme'
 gem "kramdown-math-katex"
 gem "jemoji"
 

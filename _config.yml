@@ -39,8 +39,8 @@ baseurl: "" #"/imglib2-blog" # the subpath of your site, e.g. "/blog".
 # Github and twitter are optional:
 minima:
   social_links:
-    twitter: "search?q=%23ImgLib2&src=typed_query&f=top"
-    github: "imglib"
+    - { platform: github,  user_url: "imglib" }
+    - { platform: twitter, user_url: "search?q=%23ImgLib2&src=typed_query&f=top" }
 
 # Set this to true to get LaTeX math equation support
 use_math: true
@@ -102,7 +102,7 @@ plugins:
 paginate: 15
 paginate_path: /page:num/
 
-remote_theme: jekyll/minima
+# remote_theme: jekyll/minima
 
 titles_from_headings:
   enabled:     true
