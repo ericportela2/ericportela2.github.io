@@ -1,6 +1,31 @@
----
-layout: home
-search_exclude: true
-image: images/imglib2-logo.png
----
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Styles/styles.css">
+    <script src="script.js"></script>
+    <script type="text/javascript" src="parser.js"></script>
 
+</head>
+<body>
+
+    <div id="main-content">
+
+        <div id="nav-bar">
+            <img src="Assets/Images/imglib2-logo-icon.svg">
+            <h2>ImgLib2 news & tutorials</h2>
+        </div>
+
+        <h1>Packages</h1>
+
+        <input type="text" id="search-bar" onkeyup="searchPackages()" placeholder="Search for packages..." title="Type in a package">
+
+        <ul id="packages-ul">
+            
+        </ul>
+
+    </div>
+
+
+</body>
+</html>

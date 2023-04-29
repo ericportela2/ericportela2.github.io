@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="66px" height="66px" viewBox="0 0 66 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>search_lupe</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="web_list_view.html" transform="translate(-265.000000, -478.000000)" stroke="#979797" stroke-width="5">
+            <g id="searchbar" transform="translate(225.000000, 450.000000)">
+                <g id="search_lupe" transform="translate(40.000000, 28.000000)">
+                    <circle id="Oval" cx="24" cy="24" r="21.5"></circle>
+                    <path d="M47.6032125,35.3071462 L47.6032125,62.6167796 C47.6032125,63.8138188 48.5736045,64.7842109 49.7706438,64.7842109 C50.967683,64.7842109 51.938075,63.8138188 51.938075,62.6167796 L51.938075,35.3071462 L51.938075,35.3071462 C51.0444393,35.4772322 50.353657,35.5622752 49.8657281,35.5622752 C49.3777992,35.5622752 48.6236274,35.4772322 47.6032125,35.3071462 Z" id="Path-6" fill="#979797" stroke-linejoin="round" transform="translate(49.770644, 50.045679) rotate(-45.000000) translate(-49.770644, -50.045679) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
