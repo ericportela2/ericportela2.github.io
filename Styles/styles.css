@@ -130,4 +130,14 @@ body {
      object-fit: contain;
   padding: 0;
   margin: 0;
+}
+#packages-ul .package-cell .main-cell .tags-section ul li {
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15), 0px 2px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+#packages-ul .package-cell .main-cell .tags-section ul li:hover {
+  background-color: #e0e0e0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25), 0px 4px 8px rgba(0, 0, 0, 0.25);
 }/*# sourceMappingURL=styles.css.map */
