@@ -7,10 +7,12 @@ If you want to add new data to be displayed in packages, follow these steps:
 2. Run the main program in GenerateJSON.java.
 3. Voila! The data file will now be updated.
 
-Make sure that the JSON file you add follows the correct format to be included in the data file. Once you have added your JSON file, the main program will automatically update the data file with the new data and regenaret this .md-file in case it was accidentally deleted.
+Make sure that the JSON file you add follows the correct format to be included in the data file. Once you have added your JSON file, the main program will automatically update the data file with the new data and regenerate this .md-file in case it was accidentally deleted.
 
 **Other things to note:**
+
 - Never edit 'main.json' directly! Always use the provided process to update the main data file.
+- Never add other files than .json. It should represent the data displayed by the parser (see JSON-object format below).
 - Make sure to push your changes to the remote Git repository in order for the changes to be displayed on the production site.
 
 **Format of JSON-object**
