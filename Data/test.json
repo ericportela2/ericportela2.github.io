@@ -1,6 +1,7 @@
 [
+    
     {
-        "name": "Bigdataprocessor2",
+        "name": "Bigdataprocessor1",
 
         "image": "Assets/Images/bigdataprocessor_logo.svg",
 
@@ -25,11 +26,11 @@
    
 
     {
-        "name": "Bigdataprocessor2",
+        "name": "Bigdataprocessor1",
 
         "image": "Assets/Images/bigdataprocessor_logo.svg",
 
-        "category": "Ecosystem",
+        "category": "Fiji-plugin for Big Data Processing",
 
         "documentation": ["link to documents", "https://github.com/bigdataprocessor/bigdataprocessor2/blob/master/README.md"],
 
@@ -48,13 +49,12 @@
         "description": "Suscipit inceptos est felis purus aenean aliquet adipiscing diam venenatis, augue nibh duis neque aliquam tellus condimentum sagittis vivamus, cras ante etiam sit conubia elit tempus accumsan libero, mattis per erat habitasse cubilia ligula penatibus curae.         Sagittis lorem augue arcu blandit libero molestie non ullamcorper, finibus imperdiet iaculis ad quam per luctus neque, ligula curae mauris parturient diam auctor eleifend laoreet ridiculus, hendrerit adipiscing sociosqu pretium nec velit aliquam. Inceptos"
     },
 
-
     {
-        "name": "Bigdataprocessor2",
+        "name": "Bigdataprocessor1",
 
         "image": "Assets/Images/bigdataprocessor_logo.svg",
 
-        "category": "Ecosystem",
+        "category": "Fiji-plugin for Big Data Processing",
 
         "documentation": ["link to documents", "https://github.com/bigdataprocessor/bigdataprocessor2/blob/master/README.md"],
 
@@ -73,63 +73,12 @@
         "description": "Suscipit inceptos est felis purus aenean aliquet adipiscing diam venenatis, augue nibh duis neque aliquam tellus condimentum sagittis vivamus, cras ante etiam sit conubia elit tempus accumsan libero, mattis per erat habitasse cubilia ligula penatibus curae.         Sagittis lorem augue arcu blandit libero molestie non ullamcorper, finibus imperdiet iaculis ad quam per luctus neque, ligula curae mauris parturient diam auctor eleifend laoreet ridiculus, hendrerit adipiscing sociosqu pretium nec velit aliquam. Inceptos"
     },
 
-
     {
-        "name": "Bigdataprocessor2",
+        "name": "Bigdataprocessor1",
 
         "image": "Assets/Images/bigdataprocessor_logo.svg",
 
-        "category": "Ecosystem",
-
-        "documentation": ["link to documents", "https://github.com/bigdataprocessor/bigdataprocessor2/blob/master/README.md"],
-
-        "citation": "https://doi.org/10.1093/bioinformatics/btab106",
-
-        "github": "https://github.com/bigdataprocessor/bigdataprocessor2", 
-
-        "fiji_imagej": "https://imagej.net/plugins/big-data-processor-2",
-
-        "website": "https://forum.image.sc/t/bigdataprocessor/34963/9",
-
-        "tutorial": "https://en.wikipedia.org/wiki/Joshua_Tree_National_Park", 
-
-        "documentation&tutorial": false,
-
-        "description": "Suscipit inceptos est felis purus aenean aliquet adipiscing diam venenatis, augue nibh duis neque aliquam tellus condimentum sagittis vivamus, cras ante etiam sit conubia elit tempus accumsan libero, mattis per erat habitasse cubilia ligula penatibus curae.         Sagittis lorem augue arcu blandit libero molestie non ullamcorper, finibus imperdiet iaculis ad quam per luctus neque, ligula curae mauris parturient diam auctor eleifend laoreet ridiculus, hendrerit adipiscing sociosqu pretium nec velit aliquam. Inceptos"
-    },
-
-
-    {
-        "name": "Bigdataprocessor2",
-
-        "image": "Assets/Images/bigdataprocessor_logo.svg",
-
-        "category": "Ecosystem",
-
-        "documentation": ["link to documents", "https://github.com/bigdataprocessor/bigdataprocessor2/blob/master/README.md"],
-
-        "citation": "https://doi.org/10.1093/bioinformatics/btab106",
-
-        "github": "https://github.com/bigdataprocessor/bigdataprocessor2", 
-
-        "fiji_imagej": "https://imagej.net/plugins/big-data-processor-2",
-
-        "website": "https://forum.image.sc/t/bigdataprocessor/34963/9",
-
-        "tutorial": "https://en.wikipedia.org/wiki/Joshua_Tree_National_Park", 
-
-        "documentation&tutorial": false,
-
-        "description": "Suscipit inceptos est felis purus aenean aliquet adipiscing diam venenatis, augue nibh duis neque aliquam tellus condimentum sagittis vivamus, cras ante etiam sit conubia elit tempus accumsan libero, mattis per erat habitasse cubilia ligula penatibus curae.         Sagittis lorem augue arcu blandit libero molestie non ullamcorper, finibus imperdiet iaculis ad quam per luctus neque, ligula curae mauris parturient diam auctor eleifend laoreet ridiculus, hendrerit adipiscing sociosqu pretium nec velit aliquam. Inceptos"
-    },
-
-
-    {
-        "name": "Bigdataprocessor2",
-
-        "image": "Assets/Images/bigdataprocessor_logo.svg",
-
-        "category": "Ecosystem",
+        "category": "Fiji-plugin for Big Data Processing",
 
         "documentation": ["link to documents", "https://github.com/bigdataprocessor/bigdataprocessor2/blob/master/README.md"],
 
@@ -147,5 +96,5 @@
 
         "description": "Suscipit inceptos est felis purus aenean aliquet adipiscing diam venenatis, augue nibh duis neque aliquam tellus condimentum sagittis vivamus, cras ante etiam sit conubia elit tempus accumsan libero, mattis per erat habitasse cubilia ligula penatibus curae.         Sagittis lorem augue arcu blandit libero molestie non ullamcorper, finibus imperdiet iaculis ad quam per luctus neque, ligula curae mauris parturient diam auctor eleifend laoreet ridiculus, hendrerit adipiscing sociosqu pretium nec velit aliquam. Inceptos"
     }
-
+   
 ]
