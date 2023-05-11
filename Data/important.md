@@ -14,6 +14,7 @@ Make sure that the JSON file you add follows the correct format to be included i
 - Make sure to push your changes to the remote Git repository in order for the changes to be displayed on the production site.
 
 **Format of JSON-object**
+
 Each JSON-object in the file must have the following format:
 
 ```
