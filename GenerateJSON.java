@@ -112,7 +112,7 @@ public class GenerateJSON {
                     + "**Other things to note:**\n"
                     + "- Never edit 'main.json' directly! Always use the provided process to update the main data file.\n"
                     + "- Make sure to push your changes to the remote Git repository in order for the changes to be displayed on the production site.\n\n"
-                    + "**Format of JSON-object**\n"
+                    + "**Format of JSON-object**\n\n"
                     + "Each JSON-object in the file must have the following format:\n\n"
 
                     + "```\n"
