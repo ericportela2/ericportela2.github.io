@@ -154,11 +154,18 @@ public class GenerateJSON {
                             + "If you want to add new data to be displayed in packages, follow these steps:\n\n"
 
                             + "1. Add your JSON file to the 'Data' directory.\n"
-                            + "2. Add your image to ./Assets/Images\n"
+                            + "2. Add your image to ./Assets/Images.\n"
                             + "3. Run the main program in GenerateJSON.java.\n"
                             + "4. Voila! The data file will now be updated.\n\n"
 
                             + "Make sure that the JSON file you add follows the correct format to be included in the data file. Once you have added your JSON file, the main program will automatically update the data file with the new data and regenerate this .md-file in case it was accidentally deleted.\n\n"
+
+                            + "**About**\n\n"
+
+                            + "- Merges all JSON-files to one big file (main.json).\n"
+                            + "- Checks if the corresponding image exists in the ./Assets/Images/ directory.\n"
+                            + "- Reformats the value of the 'image'-key, in case full path is not specified, rather only the image name.\n"
+                            + "- In case the image is not found, the 'image'-key will hold the value '###### DID NOT FIND CORRESPONDING IMAGE IN ./Assets/Images ######'. Put in the image in the folder and update JSON and re-run GenerateJSON.java.\n\n"
 
                             + "**Other things to note:**\n\n"
                             + "- Never edit 'main.json' directly! Always use the provided process to update the main data file.\n"

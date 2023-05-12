@@ -4,11 +4,18 @@
 If you want to add new data to be displayed in packages, follow these steps:
 
 1. Add your JSON file to the 'Data' directory.
-2. Add your image to ./Assets/Images
+2. Add your image to ./Assets/Images.
 3. Run the main program in GenerateJSON.java.
 4. Voila! The data file will now be updated.
 
 Make sure that the JSON file you add follows the correct format to be included in the data file. Once you have added your JSON file, the main program will automatically update the data file with the new data and regenerate this .md-file in case it was accidentally deleted.
+
+**About**
+
+- Merges all JSON-files to one big file (main.json).
+- Checks if the corresponding image exists in the ./Assets/Images/ directory.
+- Reformats the value of the 'image'-key, in case full path is not specified, rather only the image name.
+- In case the image is not found, the 'image'-key will hold the value '###### DID NOT FIND CORRESPONDING IMAGE IN ./Assets/Images ######'. Put in the image in the folder and update JSON and re-run GenerateJSON.java.
 
 **Other things to note:**
 
