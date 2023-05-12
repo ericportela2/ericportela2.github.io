@@ -111,8 +111,11 @@ public class GenerateJSON {
                             + "- Never edit 'main.json' directly! Always use the provided process to update the main data file.\n"
                             + "- Never add other files than .json. It should represent the data displayed by the parser (see JSON-object format below).\n"
                             + "- Make sure to push your changes to the remote Git repository in order for the changes to be displayed on the production site.\n\n"
+                            
                             + "**Format of JSON-object**\n\n"
-                            + "Each JSON-object in the file must have the following format:\n\n"
+                            + "- JSON-objects must be in an array []"
+                            + "- Multiple JSON-object are separated by commas"
+                            + "- Each JSON-object in the file must have the following format\n\n"
 
                             + "```\n"
 
@@ -130,7 +133,46 @@ public class GenerateJSON {
                                 + "\t\"description\": \"Suscipit inceptos est felis purus aenean aliquet adipiscing diam venenatis...\"\n"
                             + "}\n"
                             
-                            +"```";
+                            +"```\n\n"
+
+                            + "**Example of complete JSON-file**\n\n"
+
+                            + "```\n"
+
+                            + "[ \n\n"
+
+                            + "\t{\n"
+                                + "\t\t\"name\": \"Bigdataprocessor1\",\n"
+                                + "\t\t\"image\": \"Assets/Images/bigdataprocessor_logo.svg\",\n"
+                                + "\t\t\"category\": \"Fiji-plugin for Big Data Processing\",\n"
+                                + "\t\t\"documentation\": [\"link to documents\", \"https://github.com/bigdataprocessor/bigdataprocessor2/blob/master/README.md\"],\n"
+                                + "\t\t\"citation\": \"https://doi.org/10.1093/bioinformatics/btab106\",\n"
+                                + "\t\t\"github\": \"https://github.com/bigdataprocessor/bigdataprocessor2\", \n"
+                                + "\t\t\"fiji_imagej\": \"https://imagej.net/plugins/big-data-processor-2\",\n"
+                                + "\t\t\"website\": \"https://forum.image.sc/t/bigdataprocessor/34963/9\",\n"
+                                + "\t\t\"tutorial\": \"https://en.wikipedia.org/wiki/Joshua_Tree_National_Park\", \n"
+                                + "\t\t\"documentation&tutorial\": false,\n"
+                                + "\t\t\"description\": \"Suscipit inceptos est felis purus aenean aliquet adipiscing diam venenatis...\"\n"
+                            + "\t},\n"
+
+                            + "\t{\n"
+                                + "\t\t\"name\": \"Bigdataprocessor1\",\n"
+                                + "\t\t\"image\": \"Assets/Images/bigdataprocessor_logo.svg\",\n"
+                                + "\t\t\"category\": \"Fiji-plugin for Big Data Processing\",\n"
+                                + "\t\t\"documentation\": [\"link to documents\", \"https://github.com/bigdataprocessor/bigdataprocessor2/blob/master/README.md\"],\n"
+                                + "\t\t\"citation\": \"https://doi.org/10.1093/bioinformatics/btab106\",\n"
+                                + "\t\t\"github\": \"https://github.com/bigdataprocessor/bigdataprocessor2\", \n"
+                                + "\t\t\"fiji_imagej\": \"https://imagej.net/plugins/big-data-processor-2\",\n"
+                                + "\t\t\"website\": \"https://forum.image.sc/t/bigdataprocessor/34963/9\",\n"
+                                + "\t\t\"tutorial\": \"https://en.wikipedia.org/wiki/Joshua_Tree_National_Park\", \n"
+                                + "\t\t\"documentation&tutorial\": false,\n"
+                                + "\t\t\"description\": \"Suscipit inceptos est felis purus aenean aliquet adipiscing diam venenatis...\"\n"
+                            + "\t}\n\n"
+
+                            + "] \n"
+                            
+                            +"```\n\n";
+
         
         generateFile(directoryPath, IMPORTANT_DIR_NAME, fileContent);
     }

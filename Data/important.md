@@ -17,7 +17,7 @@ Make sure that the JSON file you add follows the correct format to be included i
 
 **Format of JSON-object**
 
-Each JSON-object in the file must have the following format:
+- JSON-objects must be in an array []- Multiple JSON-object are separated by commas- Each JSON-object in the file must have the following format
 
 ```
 {
@@ -34,3 +34,39 @@ Each JSON-object in the file must have the following format:
 	"description": "Suscipit inceptos est felis purus aenean aliquet adipiscing diam venenatis..."
 }
 ```
+
+**Example of complete JSON-file**
+
+```
+[ 
+
+	{
+		"name": "Bigdataprocessor1",
+		"image": "Assets/Images/bigdataprocessor_logo.svg",
+		"category": "Fiji-plugin for Big Data Processing",
+		"documentation": ["link to documents", "https://github.com/bigdataprocessor/bigdataprocessor2/blob/master/README.md"],
+		"citation": "https://doi.org/10.1093/bioinformatics/btab106",
+		"github": "https://github.com/bigdataprocessor/bigdataprocessor2", 
+		"fiji_imagej": "https://imagej.net/plugins/big-data-processor-2",
+		"website": "https://forum.image.sc/t/bigdataprocessor/34963/9",
+		"tutorial": "https://en.wikipedia.org/wiki/Joshua_Tree_National_Park", 
+		"documentation&tutorial": false,
+		"description": "Suscipit inceptos est felis purus aenean aliquet adipiscing diam venenatis..."
+	},
+	{
+		"name": "Bigdataprocessor1",
+		"image": "Assets/Images/bigdataprocessor_logo.svg",
+		"category": "Fiji-plugin for Big Data Processing",
+		"documentation": ["link to documents", "https://github.com/bigdataprocessor/bigdataprocessor2/blob/master/README.md"],
+		"citation": "https://doi.org/10.1093/bioinformatics/btab106",
+		"github": "https://github.com/bigdataprocessor/bigdataprocessor2", 
+		"fiji_imagej": "https://imagej.net/plugins/big-data-processor-2",
+		"website": "https://forum.image.sc/t/bigdataprocessor/34963/9",
+		"tutorial": "https://en.wikipedia.org/wiki/Joshua_Tree_National_Park", 
+		"documentation&tutorial": false,
+		"description": "Suscipit inceptos est felis purus aenean aliquet adipiscing diam venenatis..."
+	}
+
+] 
+```
+
