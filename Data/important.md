@@ -69,4 +69,3 @@ Make sure that the JSON file you add follows the correct format to be included i
 
 ] 
 ```
-

@@ -171,7 +171,7 @@ public class GenerateJSON {
 
                             + "] \n"
                             
-                            +"```\n\n";
+                            +"```";
 
         
         generateFile(directoryPath, IMPORTANT_DIR_NAME, fileContent);
