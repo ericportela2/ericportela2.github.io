@@ -42,7 +42,7 @@ public class GenerateJSON {
                         }
                     }
 
-                    jsonString = jsonString.substring(2, jsonString.length()-1); //Removes original '[' and ']'
+                    jsonString = jsonString.substring(2, jsonString.length()-2); //Removes original '[' and ']'
 
                     if (count < dir.listFiles().length-1) {
                         jsonString += ",";
