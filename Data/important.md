@@ -4,8 +4,9 @@
 If you want to add new data to be displayed in packages, follow these steps:
 
 1. Add your JSON file to the 'Data' directory.
-2. Run the main program in GenerateJSON.java.
-3. Voila! The data file will now be updated.
+2. Add your image to ./Assets/Images
+3. Run the main program in GenerateJSON.java.
+4. Voila! The data file will now be updated.
 
 Make sure that the JSON file you add follows the correct format to be included in the data file. Once you have added your JSON file, the main program will automatically update the data file with the new data and regenerate this .md-file in case it was accidentally deleted.
 
@@ -17,7 +18,9 @@ Make sure that the JSON file you add follows the correct format to be included i
 
 **Format of JSON-object**
 
-- JSON-objects must be in an array []- Multiple JSON-object are separated by commas- Each JSON-object in the file must have the following format
+- JSON-objects must be in an array []
+- Multiple JSON-object are separated by commas
+- Each JSON-object in the file must have the following format
 
 ```
 {

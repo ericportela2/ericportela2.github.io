@@ -4,6 +4,7 @@ public class GenerateJSON {
 
     private String MAIN_JSON_NAME = "main.json";
     private String IMPORTANT_DIR_NAME = "important.md";
+    private String IMAGES_FOLDER_DIR = "./Assets/Images/";
 
     public GenerateJSON() {
 
@@ -38,10 +39,48 @@ public class GenerateJSON {
                     while ((line = br.readLine()) != null) { //CHECK FOR EMPTY ROWS
 
                         if (!line.trim().equals("")) {
-                            jsonString += "\n" + line;
-                        }
-                    }
 
+
+                            if (line.contains("\"image\": ")) {
+                                String imgName = line.replaceAll(" ", "").split(":")[1];
+    
+                                if (imgName.length() != 0 && !imgName.contains("Assets/Images/")) {
+    
+                                    imgName = imgName.replaceAll("\"",""); //!Remove quotation marks ""
+                                    imgName = imgName.replaceAll(",", ""); //!Remove commas ,
+                                    imgName = imgName.replaceAll("/", "");//!Remove slash /
+                                    
+                                    //!LOOK FOR IMAGE IN FOLDER!
+                                    if(findImage(imgName)) { //FOUND
+                                        String imgPath = IMAGES_FOLDER_DIR + imgName;
+
+                                        jsonString += "\n\t\t\"image\": " + "\"" + imgPath + "\"" + ",";
+                                    } else { //NOT FOUND
+                                        System.out.println("DID NOT FIND"
+                                                            + imgName + "\n"
+                                                            + "in the Assets/Images directory."
+                                                            );
+    
+                                        jsonString += "\n\t\t\"image\": " + "\"" + "###### DID NOT FIND CORRESPONDING IMAGE IN ./Assets/Images ######" + "\"" + ",";
+                                    }
+                                } else {
+                                    jsonString += "\n" + line;
+                                }
+                            } else {
+                                jsonString += "\n" + line;
+                            }
+                        }
+
+                        // if (!line.trim().equals("")) {
+                        //     if (line.contains("\"image\": ")) {
+                        //         System.out.println(line.strip().trim());
+                        //     } else {
+                        //         jsonString += "\n" + line;
+
+                        //     }
+                        // }
+                    }
+                    
                     jsonString = jsonString.substring(2, jsonString.length()-2); //Removes original '[' and ']'
 
                     if (count < dir.listFiles().length-1) {
@@ -58,9 +97,22 @@ public class GenerateJSON {
             count ++;
         }
 
-        concatenatedJSONString += "\n\n]";
+        concatenatedJSONString += "\n\n\n]";
 
         return concatenatedJSONString;
+    }
+
+    private boolean findImage(String imgName) {
+
+        File dir = new File(IMAGES_FOLDER_DIR);
+        
+        for (File f: dir.listFiles()) {
+            if (f.getName().equals(imgName)) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     private void generateDirectory(String directoryPath) {
@@ -102,8 +154,9 @@ public class GenerateJSON {
                             + "If you want to add new data to be displayed in packages, follow these steps:\n\n"
 
                             + "1. Add your JSON file to the 'Data' directory.\n"
-                            + "2. Run the main program in GenerateJSON.java.\n"
-                            + "3. Voila! The data file will now be updated.\n\n"
+                            + "2. Add your image to ./Assets/Images\n"
+                            + "3. Run the main program in GenerateJSON.java.\n"
+                            + "4. Voila! The data file will now be updated.\n\n"
 
                             + "Make sure that the JSON file you add follows the correct format to be included in the data file. Once you have added your JSON file, the main program will automatically update the data file with the new data and regenerate this .md-file in case it was accidentally deleted.\n\n"
 
@@ -113,8 +166,8 @@ public class GenerateJSON {
                             + "- Make sure to push your changes to the remote Git repository in order for the changes to be displayed on the production site.\n\n"
                             
                             + "**Format of JSON-object**\n\n"
-                            + "- JSON-objects must be in an array []"
-                            + "- Multiple JSON-object are separated by commas"
+                            + "- JSON-objects must be in an array []\n"
+                            + "- Multiple JSON-object are separated by commas\n"
                             + "- Each JSON-object in the file must have the following format\n\n"
 
                             + "```\n"
