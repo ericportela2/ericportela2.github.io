@@ -176,4 +176,23 @@ body {
         }    
     }
 
+
+    //Fades the cells away when they are filtrated in search 
+    .package-cell {
+        transition: all 0.3s ease-in-out;
+    }
+
+    .package-cell.visible {
+        opacity: 1;
+        height: auto;
+    }
+
+    .package-cell.hidden {
+        opacity: 0;
+        height: 0;
+        margin-top: 0;
+        padding: 0;
+        border: none;
+    }
+
 }
