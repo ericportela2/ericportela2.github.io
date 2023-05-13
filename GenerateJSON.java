@@ -156,16 +156,17 @@ public class GenerateJSON {
                             + "1. Add your JSON file to the 'Data' directory.\n"
                             + "2. Add your image to ./Assets/Images.\n"
                             + "3. Run the main program in GenerateJSON.java.\n"
-                            + "4. Voila! The data file will now be updated.\n\n"
+                            + "4. Voila! The data file will now be updated.\n"
+                            + "5. Push changes to GitHub in order to see changes/new data on production site.\n\n"
 
-                            + "Make sure that the JSON file you add follows the correct format to be included in the data file. Once you have added your JSON file, the main program will automatically update the data file with the new data and regenerate this .md-file in case it was accidentally deleted.\n\n"
+                            + "Make sure that the JSON file you add follows the correct format to be included in the data file (see exact format, below). Once you have added your JSON file, the main program will automatically update the data file with the new data and regenerate this .md-file in case it was accidentally deleted.\n\n"
 
                             + "**About**\n\n"
 
                             + "- Merges all JSON-files to one big file (main.json).\n"
                             + "- Checks if the corresponding image exists in the ./Assets/Images/ directory.\n"
-                            + "- Reformats the value of the 'image'-key, in case full path is not specified, rather only the image name.\n"
-                            + "- In case the image is not found, the 'image'-key will hold the value '###### DID NOT FIND CORRESPONDING IMAGE IN ./Assets/Images ######'. Put in the image in the folder and update JSON and re-run GenerateJSON.java.\n\n"
+                            + "- Reformats the value of the 'image'-key, in case full path is not specified (for instance if only the image name (excl. full path) is added).\n"
+                            + "- In case the image is not found, the 'image'-key will hold the value '###### DID NOT FIND CORRESPONDING IMAGE IN ./Assets/Images ######'. Put the image in the folder, make sure value 'image'-key holds the correct name of the image and update JSON and re-run GenerateJSON.java.\n\n"
 
                             + "**Other things to note:**\n\n"
                             + "- Never edit 'main.json' directly! Always use the provided process to update the main data file.\n"
@@ -175,7 +176,8 @@ public class GenerateJSON {
                             + "**Format of JSON-object**\n\n"
                             + "- JSON-objects must be in an array []\n"
                             + "- Multiple JSON-object are separated by commas\n"
-                            + "- Each JSON-object in the file must have the following format\n\n"
+                            + "- Each JSON-object in the file must have the following format\n"
+                            + "- Note that 'image'-key can either be specified by the image-name or full path to the image. When 'GenerateJSON.java is run, the value will automatically be updated to the correct path.'\n\n"
 
                             + "```\n"
 

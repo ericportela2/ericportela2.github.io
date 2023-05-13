@@ -7,15 +7,16 @@ If you want to add new data to be displayed in packages, follow these steps:
 2. Add your image to ./Assets/Images.
 3. Run the main program in GenerateJSON.java.
 4. Voila! The data file will now be updated.
+5. Push changes to GitHub in order to see changes/new data on production site.
 
-Make sure that the JSON file you add follows the correct format to be included in the data file. Once you have added your JSON file, the main program will automatically update the data file with the new data and regenerate this .md-file in case it was accidentally deleted.
+Make sure that the JSON file you add follows the correct format to be included in the data file (see exact format, below). Once you have added your JSON file, the main program will automatically update the data file with the new data and regenerate this .md-file in case it was accidentally deleted.
 
 **About**
 
 - Merges all JSON-files to one big file (main.json).
 - Checks if the corresponding image exists in the ./Assets/Images/ directory.
-- Reformats the value of the 'image'-key, in case full path is not specified, rather only the image name.
-- In case the image is not found, the 'image'-key will hold the value '###### DID NOT FIND CORRESPONDING IMAGE IN ./Assets/Images ######'. Put in the image in the folder and update JSON and re-run GenerateJSON.java.
+- Reformats the value of the 'image'-key, in case full path is not specified (for instance if only the image name (excl. full path) is added).
+- In case the image is not found, the 'image'-key will hold the value '###### DID NOT FIND CORRESPONDING IMAGE IN ./Assets/Images ######'. Put the image in the folder, make sure value 'image'-key holds the correct name of the image and update JSON and re-run GenerateJSON.java.
 
 **Other things to note:**
 
@@ -28,6 +29,7 @@ Make sure that the JSON file you add follows the correct format to be included i
 - JSON-objects must be in an array []
 - Multiple JSON-object are separated by commas
 - Each JSON-object in the file must have the following format
+- Note that 'image'-key can either be specified by the image-name or full path to the image. When 'GenerateJSON.java is run, the value will automatically be updated to the correct path.'
 
 ```
 {
