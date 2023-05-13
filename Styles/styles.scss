@@ -49,6 +49,7 @@ body {
     top: 0;
 }
 
+
 #packages-ul {
     display: flex;
     flex-direction: column;
@@ -123,7 +124,7 @@ body {
                 ul {
                     display: flex;
                     column-gap: 2vw;
-                    list-style: none;
+                    list-style-type: none;
                     padding: 0;
                     margin: 0;
     
@@ -178,21 +179,24 @@ body {
 
 
     //Fades the cells away when they are filtrated in search 
+    
     .package-cell {
         transition: all 0.3s ease-in-out;
-    }
-
-    .package-cell.visible {
+      }
+      
+      .package-cell.visible {
         opacity: 1;
-        height: auto;
-    }
-
-    .package-cell.hidden {
+        margin-top: 20px;
+      }
+      
+      .package-cell.hidden {
         opacity: 0;
-        height: 0;
+        max-height: 0;
         margin-top: 0;
         padding: 0;
         border: none;
-    }
+      }
+      
 
+      
 }
