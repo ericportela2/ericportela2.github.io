@@ -34,6 +34,9 @@ function searchPackages() {
         }
     }
 }
+
+
+
   
 
   //Searches both the H1/title of the package and its description text but with bug, adding margi to the bottom

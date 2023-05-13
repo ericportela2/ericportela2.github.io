@@ -75,6 +75,9 @@ body {
             /* display: 70%;
             display: flex;
             column-gap: 2vw; */
+            display: flex;
+            flex-direction: column;
+            width: 100%;
         
             /* Shadow */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* sets the box-shadow */
@@ -83,21 +86,31 @@ body {
     
             .content {
                 display: flex;
+                width: 100%;
                 column-gap: 2vw;
                 padding: 20px;
-    
+                    
                 #text-section {
+                    display: flex;
+                    width: 100%;
+                    flex-direction: column;
     
                     #title {
+                        display: flex;
+                        width: 100%;
         
                     }
         
                     #subtitle {
+                        display: flex;
+                        width: 100%;
                         color: rgb(161, 161, 161);
                         font-style: italic;
                     }
                     
                     #description-text {
+                        display: flex;
+                        width: 100%;
                         line-height: 1.7;
                     }
         
@@ -117,13 +130,18 @@ body {
                 justify-content: center;
                 align-items: center;
                 padding: 3vw;
-                height: 6vh;
+                height: auto;
                 width: 100%;
                 border-radius: 0px 0px 10px 10px;
     
                 ul {
                     display: flex;
-                    column-gap: 2vw;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    width: 100%;
+
+                    column-gap: 2%;
+                    row-gap: 2vh;
                     list-style-type: none;
                     padding: 0;
                     margin: 0;
@@ -132,7 +150,6 @@ body {
                         display: flex;
                         column-gap: 1vw;
                         border-radius: 10px;
-                        background-color: lightgray;
                         // padding: 0 1% 0 1%;
 
                         a {
@@ -195,8 +212,68 @@ body {
         margin-top: 0;
         padding: 0;
         border: none;
-      }
-      
+      } 
+}
 
-      
+
+@media screen and (max-width: 650px) {
+
+    h1 {
+        font-size: large;
+    }
+
+
+    #packages-ul {
+
+        .package-cell {
+    
+            .main-cell {
+        
+                .content {
+                    display: flex;
+                    flex-direction: column;
+        
+                    #text-section {
+        
+                        #title {
+                        }
+            
+                        #subtitle {
+                        }
+                        
+                        #description-text {
+                            // display: none !important; //Removes the text!
+                        }
+            
+                    }
+                }
+    
+                .tags-section {
+        
+                    ul {
+                        display: flex;
+                        flex-wrap: nowrap;
+                        overflow-x: auto;
+                        -webkit-overflow-scrolling: touch;
+                        margin:0;
+                        padding: 0;
+    
+                        li {
+                            white-space: nowrap;
+    
+                            a {
+                            }
+        
+                            img {
+                            }
+                        }
+                    }
+                }
+            }    
+        }
+    }
+
+
+
+    
 }
