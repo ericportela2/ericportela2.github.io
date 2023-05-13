@@ -112,6 +112,7 @@ body {
                         display: flex;
                         width: 100%;
                         line-height: 1.7;
+                        background-color: blue;
                     }
         
                 }
@@ -221,19 +222,27 @@ body {
     h1 {
         font-size: large;
     }
-
-
+    
     #packages-ul {
+        width: 70%;
 
         .package-cell {
+            display: flex;
+            width: 100%;
     
             .main-cell {
+                display: flex;
+                width: 100%;
+                // background-color: blue;
         
                 .content {
                     display: flex;
+                    width: 100%;
                     flex-direction: column;
         
                     #text-section {
+                        display: flex;
+                        width: 100%;
         
                         #title {
                         }
@@ -252,7 +261,7 @@ body {
         
                     ul {
                         display: flex;
-                        flex-wrap: nowrap;
+                        // flex-wrap: nowrap;
                         overflow-x: auto;
                         -webkit-overflow-scrolling: touch;
                         margin:0;
@@ -272,8 +281,5 @@ body {
             }    
         }
     }
-
-
-
     
 }

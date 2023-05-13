@@ -97,6 +97,7 @@ body {
   display: flex;
   width: 100%;
   line-height: 1.7;
+  background-color: blue;
 }
 #packages-ul .package-cell .main-cell img {
   max-width: 100px;
@@ -181,13 +182,28 @@ body {
   h1 {
     font-size: large;
   }
+  #packages-ul {
+    width: 70%;
+  }
+  #packages-ul .package-cell {
+    display: flex;
+    width: 100%;
+  }
+  #packages-ul .package-cell .main-cell {
+    display: flex;
+    width: 100%;
+  }
   #packages-ul .package-cell .main-cell .content {
     display: flex;
+    width: 100%;
     flex-direction: column;
+  }
+  #packages-ul .package-cell .main-cell .content #text-section {
+    display: flex;
+    width: 100%;
   }
   #packages-ul .package-cell .main-cell .tags-section ul {
     display: flex;
-    flex-wrap: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     margin: 0;
