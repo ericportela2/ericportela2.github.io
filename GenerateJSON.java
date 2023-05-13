@@ -2,9 +2,24 @@ import java.io.*;
 
 public class GenerateJSON {
 
+    //Attributes/Constants
     private String MAIN_JSON_NAME = "main.json";
     private String IMPORTANT_DIR_NAME = "important.md";
     private String IMAGES_FOLDER_DIR = "./Assets/Images/";
+
+
+     //TODO: Run this main-program after adding new .json-file(-s) to 'Data' directory + corresponfing images to 'Assets/Images' directory!
+     public static void main(String[] args) {
+        new GenerateJSON();
+    }
+
+
+    /**
+     * This is a constructor for the GenerateJSON class.
+     * It initializes the folderPath variable to "./Data/", reads the files from the directory specified 
+     * by folderPath using the readFilesFromDir method, generates a JSON file using the generateJSONFile
+     * method and generates an "about" file using the generateAboutFile method.
+     */
 
     public GenerateJSON() {
 
@@ -17,6 +32,16 @@ public class GenerateJSON {
         generateAboutFile(folderPath);
     }
 
+
+    /**
+     * Reads all files (excluding "main.json" and "important.md") in a given directory and concatenates 
+     * their contents into a JSON-formatted string, including the image paths of any images referenced 
+     * in the files (if found in the "./Assets/Images" directory).
+     * @param folderPath The file path of the directory containing the files to be read.
+     * @return A string containing the concatenated JSON-formatted contents of the files (excluding 
+     * "main.json" and "important.md"), including the image paths of any images referenced in the files
+     * (if found in the "./Assets/Images" directory).
+     */
 
     private String readFilesFromDir(String folderPath) {
 
@@ -39,7 +64,6 @@ public class GenerateJSON {
                     while ((line = br.readLine()) != null) { //CHECK FOR EMPTY ROWS
 
                         if (!line.trim().equals("")) {
-
 
                             if (line.contains("\"image\": ")) {
                                 String imgName = line.replaceAll(" ", "").split(":")[1];
@@ -70,15 +94,6 @@ public class GenerateJSON {
                                 jsonString += "\n" + line;
                             }
                         }
-
-                        // if (!line.trim().equals("")) {
-                        //     if (line.contains("\"image\": ")) {
-                        //         System.out.println(line.strip().trim());
-                        //     } else {
-                        //         jsonString += "\n" + line;
-
-                        //     }
-                        // }
                     }
                     
                     jsonString = jsonString.substring(2, jsonString.length()-2); //Removes original '[' and ']'
@@ -102,6 +117,13 @@ public class GenerateJSON {
         return concatenatedJSONString;
     }
 
+
+    /**
+     * Looks for an image file with the specified name in the "Assets/Images" directory.
+     * @param imgName the name of the image file to look for.
+     * @return true if the image file is found, false otherwise.
+     */
+
     private boolean findImage(String imgName) {
 
         File dir = new File(IMAGES_FOLDER_DIR);
@@ -115,13 +137,27 @@ public class GenerateJSON {
         return false;
     }
 
+
+     /**
+      * Creates a new directory at the specified path if it doesn't already exist.
+      * @param directoryPath the path of the directory to be created
+      */
+
     private void generateDirectory(String directoryPath) {
-        // Create directory if it doesn't exist
         File directory = new File(directoryPath);
         if (!directory.exists()) {
             directory.mkdirs();
         }
     }
+
+
+    /**
+     * This method generates a new file at the given directory path with the given file name and file content.
+     * If the directory does not exist, it will be created.
+     * @param directoryPath the path of the directory where the file will be created
+     * @param fileName the name of the new file to be created
+     * @param fileContent the content to be written into the new file
+     */
 
     private void generateFile(String directoryPath, String fileName, String fileContent) {
         String filePath = directoryPath + "/" + fileName;
@@ -135,16 +171,34 @@ public class GenerateJSON {
             FileWriter writer = new FileWriter(file);
             writer.write(fileContent);
             writer.close();
-            System.out.println("File created at " + file.getAbsolutePath());
+            System.out.println("\n* File created at " + file.getAbsolutePath() + "\n\n");
+
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
+    
+    /**
+     * Generates a JSON file with the given file content in the specified directory path.
+     * @param directoryPath the path of the directory where the file will be created.
+     * @param fileContent the content of the file to be created.
+     */
+
     private void generateJSONFile(String directoryPath, String fileContent) {
         generateFile(directoryPath, MAIN_JSON_NAME, fileContent);
     }
 
+
+    /**
+     * Generates an about file with instructions on how to update the JSON Data File.
+     * It concatenates all JSON files to one big file (main.json), checks if the corresponding image exists in the
+     * Assets/Images directory and reformats the value of the 'image'-key, in case a full path is not specified.
+     * If the image is not found, the 'image'-key will hold the value '###### DID NOT FIND CORRESPONDING IMAGE IN ./Assets/Images ######'.
+     * The method ensures that the JSON file added follows the correct format to be included in the data file.
+     * @param directoryPath a String representing the path to the directory where the JSON file is to be saved
+     * @throws IOException if the input file is not found
+     */
 
     private void generateAboutFile(String directoryPath) {
 
@@ -238,13 +292,4 @@ public class GenerateJSON {
         
         generateFile(directoryPath, IMPORTANT_DIR_NAME, fileContent);
     }
-
-
-    //TODO: Run this main-program after adding new .json-file(-s) to 'Data' directory!
-    public static void main(String[] args) {
-        new GenerateJSON();
-    }
-
-
-
 }
