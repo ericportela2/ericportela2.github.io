@@ -34,13 +34,13 @@ body {
     margin-top: 2vh;
     border: solid 2px lightgray;
     border-radius: 10px;
-    padding-left: 5vw;
+    padding-left: 70px;
 
     font-size: large;
 
     background-image: url('/Assets/Icons/search_icon.svg');
     background-repeat: no-repeat;
-    background-size: 4vh auto;
+    background-size: auto 50%;
     background-position: 2vh;
 
     // Makes the search bar sticky
@@ -218,6 +218,10 @@ body {
 
 @media screen and (max-width: 650px) {
 
+    #search-bar {
+        font-size: small;
+    }
+
     h1 {
         font-size: large;
     }
@@ -263,11 +267,10 @@ body {
                         overflow-x: auto;
                         -webkit-overflow-scrolling: touch;
                         margin:0;
-                        padding: 0;
+                        padding: 5px;
     
                         li {
                             white-space: nowrap;
-    
                             a {
                             }
         
