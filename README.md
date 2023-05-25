@@ -1,8 +1,6 @@
 # imglib2-jekyll
 
 * This is the repo for an updated version of the imglib2-blog site that will include a new "Packages section".
-* This project is part of an internship for a research group at "Institutionen för Experimentell Medicinsk Vetenskap; avdelningen för Lungbiologi".
-* Period: 2023 April - 2023 July
 
 # Table of Contents
 1. [Basic structure of Jekyll site](#basic-structure-of-jekyll-site)
