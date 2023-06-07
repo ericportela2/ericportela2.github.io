@@ -229,7 +229,7 @@ public class GenerateJSON {
                             
                             + "**Format of JSON-object**\n\n"
                             + "- JSON-objects must be in an array []\n"
-                            + "- Multiple JSON-object are separated by commas\n"
+                            + "- Multiple JSON-objects are separated by commas\n"
                             + "- Each JSON-object in the file must have the following format\n"
                             + "- Note that 'image'-key can either be specified by the image-name or full path to the image. When 'GenerateJSON.java is run, the value will automatically be updated to the correct path.'\n\n"
 
