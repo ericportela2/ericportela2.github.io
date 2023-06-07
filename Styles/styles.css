@@ -59,7 +59,7 @@ body {
   -moz-column-gap: 0.5vw;
        column-gap: 0.5vw;
   border-radius: 10px;
-  padding: 0 1% 0 1%;
+  padding: 2%;
 }
 #main-content #nav-bar .bdv_cell ul li a, #main-content #nav-bar .img_lib_cell ul li a {
   display: flex;
@@ -73,14 +73,7 @@ body {
   text-decoration: none;
   letter-spacing: 1px;
   font-weight: normal;
-}
-#main-content #nav-bar .bdv_cell ul li img, #main-content #nav-bar .img_lib_cell ul li img {
-  max-height: 50%;
-  width: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
-  padding: 0;
-  margin: 0;
+  white-space: nowrap;
 }
 #main-content #nav-bar .bdv_cell ul li, #main-content #nav-bar .img_lib_cell ul li {
   background-color: #f3f3f3;
