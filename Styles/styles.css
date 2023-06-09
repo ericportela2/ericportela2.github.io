@@ -26,9 +26,6 @@ body {
   flex-direction: column;
   padding: 20px;
   /* Shadow */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* sets the box-shadow */
-  background-color: white;
-  border-radius: 10px;
   justify-content: center;
 }
 #main-content #nav-bar .bdv_cell img, #main-content #nav-bar .img_lib_cell img {
@@ -42,10 +39,16 @@ body {
   flex-direction: row;
   align-items: center;
 }
-#main-content #nav-bar .bdv_cell ul, #main-content #nav-bar .img_lib_cell ul {
+#main-content #nav-bar .bdv_cell .tags_section, #main-content #nav-bar .img_lib_cell .tags_section {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+#main-content #nav-bar .bdv_cell .tags_section ul, #main-content #nav-bar .img_lib_cell .tags_section ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   width: 100%;
   -moz-column-gap: 2%;
        column-gap: 2%;
@@ -54,14 +57,14 @@ body {
   padding: 0;
   margin: 0;
 }
-#main-content #nav-bar .bdv_cell ul li, #main-content #nav-bar .img_lib_cell ul li {
+#main-content #nav-bar .bdv_cell .tags_section ul li, #main-content #nav-bar .img_lib_cell .tags_section ul li {
   display: flex;
-  -moz-column-gap: 0.5vw;
-       column-gap: 0.5vw;
+  -moz-column-gap: 1vw;
+       column-gap: 1vw;
   border-radius: 10px;
-  padding: 2%;
+  height: 5vh;
 }
-#main-content #nav-bar .bdv_cell ul li a, #main-content #nav-bar .img_lib_cell ul li a {
+#main-content #nav-bar .bdv_cell .tags_section ul li a, #main-content #nav-bar .img_lib_cell .tags_section ul li a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,14 +78,19 @@ body {
   font-weight: normal;
   white-space: nowrap;
 }
-#main-content #nav-bar .bdv_cell ul li, #main-content #nav-bar .img_lib_cell ul li {
-  background-color: #f3f3f3;
-  border-radius: 5px;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15), 0px 2px 4px rgba(0, 0, 0, 0.15);
+#main-content #nav-bar .bdv_cell .tags_section ul li img, #main-content #nav-bar .img_lib_cell .tags_section ul li img {
+  max-height: 30%;
+  width: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding: 0;
+  margin: 0;
+}
+#main-content #nav-bar .bdv_cell .tags_section ul li, #main-content #nav-bar .img_lib_cell .tags_section ul li {
+  border-radius: 20px;
   transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-#main-content #nav-bar .bdv_cell ul li:hover, #main-content #nav-bar .img_lib_cell ul li:hover {
-  background-color: #e0e0e0;
+#main-content #nav-bar .bdv_cell .tags_section ul li:hover, #main-content #nav-bar .img_lib_cell .tags_section ul li:hover {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25), 0px 4px 8px rgba(0, 0, 0, 0.25);
 }
 #search-bar {
@@ -130,9 +138,6 @@ body {
   flex-direction: column;
   width: 100%;
   /* Shadow */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* sets the box-shadow */
-  background-color: white;
-  border-radius: 10px;
 }
 #packages-ul .package-cell .main-cell .content {
   display: flex;
@@ -162,9 +167,9 @@ body {
   line-height: 1.7;
 }
 #packages-ul .package-cell .main-cell img {
-  max-width: 100px;
-  max-height: 100px;
-  width: 100px;
+  max-width: 200px;
+  max-height: 200px;
+  width: 200px;
   height: auto;
 }
 #packages-ul .package-cell .main-cell .tags-section {
@@ -208,7 +213,7 @@ body {
   font-weight: normal;
 }
 #packages-ul .package-cell .main-cell .tags-section ul li img {
-  max-height: 50%;
+  max-height: 30%;
   width: auto;
   -o-object-fit: contain;
      object-fit: contain;
@@ -217,9 +222,9 @@ body {
 }
 #packages-ul .package-cell .main-cell .tags-section ul li {
   background-color: #f3f3f3;
-  border-radius: 5px;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15), 0px 2px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
   transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  height: 5vh;
 }
 #packages-ul .package-cell .main-cell .tags-section ul li:hover {
   background-color: #e0e0e0;
@@ -266,6 +271,12 @@ body {
   #packages-ul .package-cell .main-cell .content #text-section {
     display: flex;
     width: 100%;
+  }
+  #packages-ul .package-cell .main-cell img {
+    max-width: 100px;
+    max-height: 100px;
+    width: 100px;
+    height: auto;
   }
   #packages-ul .package-cell .main-cell .tags-section ul {
     display: flex;

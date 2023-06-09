@@ -3,7 +3,7 @@
 
     {
         "name": "Bigdataprocessor1",
-        "image": "Assets/Images/bigdataprocessor_logo.svg",
+        "image": "Assets/Icons/mobie-white.jpg",
         "category": "Fiji-plugin for Big Data Processing",
         "documentation": ["link to documents", "https://github.com/bigdataprocessor/bigdataprocessor2/blob/master/README.md"],
         "citation": "https://doi.org/10.1093/bioinformatics/btab106",
