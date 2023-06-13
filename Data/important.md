@@ -18,7 +18,7 @@ Make sure that the JSON file you add follows the correct format to be included i
 - Reformats the value of the 'image'-key, in case full path is not specified (for instance if only the image name (excl. full path) is added).
 - In case the image is not found, the 'image'-key will hold the value '###### DID NOT FIND CORRESPONDING IMAGE IN ./Assets/Images ######'. Put the image in the folder, make sure value 'image'-key holds the correct name of the image and update JSON and re-run GenerateJSON.java.
 
-**Other things to note:**
+**Other things to note**
 
 - Never edit 'main.json' directly! Always use the provided process to update the main data file.
 - Never add other files than .json. It should represent the data displayed by the parser (see JSON-object format below).
