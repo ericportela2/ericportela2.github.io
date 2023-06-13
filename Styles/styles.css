@@ -14,9 +14,7 @@ body {
 #main-content #nav-bar {
   display: flex;
   width: 70%;
-  align-items: center;
-  -moz-column-gap: 2vw;
-       column-gap: 2vw;
+  align-items: flex-start;
   padding-bottom: 5vh;
   border-bottom: solid 1px lightgray;
 }
@@ -44,7 +42,7 @@ body {
   width: 100%;
   justify-content: center;
 }
-#main-content #nav-bar .bdv_cell .tags_section ul, #main-content #nav-bar .img_lib_cell .tags_section ul {
+#main-content #nav-bar .bdv_cell .tags_section .tag-list, #main-content #nav-bar .img_lib_cell .tags_section .tag-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -57,14 +55,14 @@ body {
   padding: 0;
   margin: 0;
 }
-#main-content #nav-bar .bdv_cell .tags_section ul li, #main-content #nav-bar .img_lib_cell .tags_section ul li {
+#main-content #nav-bar .bdv_cell .tags_section .tag-list li, #main-content #nav-bar .img_lib_cell .tags_section .tag-list li {
   display: flex;
   -moz-column-gap: 1vw;
        column-gap: 1vw;
   border-radius: 10px;
   height: 5vh;
 }
-#main-content #nav-bar .bdv_cell .tags_section ul li a, #main-content #nav-bar .img_lib_cell .tags_section ul li a {
+#main-content #nav-bar .bdv_cell .tags_section .tag-list li a, #main-content #nav-bar .img_lib_cell .tags_section .tag-list li a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,7 +76,7 @@ body {
   font-weight: normal;
   white-space: nowrap;
 }
-#main-content #nav-bar .bdv_cell .tags_section ul li img, #main-content #nav-bar .img_lib_cell .tags_section ul li img {
+#main-content #nav-bar .bdv_cell .tags_section .tag-list li img, #main-content #nav-bar .img_lib_cell .tags_section .tag-list li img {
   max-height: 30%;
   width: auto;
   -o-object-fit: contain;
@@ -86,12 +84,37 @@ body {
   padding: 0;
   margin: 0;
 }
-#main-content #nav-bar .bdv_cell .tags_section ul li, #main-content #nav-bar .img_lib_cell .tags_section ul li {
+#main-content #nav-bar .bdv_cell .tags_section .tag-list .single-option-tag, #main-content #nav-bar .img_lib_cell .tags_section .tag-list .single-option-tag, #main-content #nav-bar .bdv_cell .tags_section .tag-list .multiple-option-tag, #main-content #nav-bar .img_lib_cell .tags_section .tag-list .multiple-option-tag {
   border-radius: 20px;
   transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-#main-content #nav-bar .bdv_cell .tags_section ul li:hover, #main-content #nav-bar .img_lib_cell .tags_section ul li:hover {
+#main-content #nav-bar .bdv_cell .tags_section .tag-list .single-option-tag:hover, #main-content #nav-bar .img_lib_cell .tags_section .tag-list .single-option-tag:hover, #main-content #nav-bar .bdv_cell .tags_section .tag-list .multiple-option-tag:hover, #main-content #nav-bar .img_lib_cell .tags_section .tag-list .multiple-option-tag:hover {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25), 0px 4px 8px rgba(0, 0, 0, 0.25);
+}
+#main-content #nav-bar .bdv_cell .tags_section .tag-list .multiple-option-tag, #main-content #nav-bar .img_lib_cell .tags_section .tag-list .multiple-option-tag {
+  position: relative;
+}
+#main-content #nav-bar .bdv_cell .tags_section .tag-list .multiple-option-tag ul, #main-content #nav-bar .img_lib_cell .tags_section .tag-list .multiple-option-tag ul {
+  margin-top: 1vh;
+  background-color: lightgray;
+  border-radius: 10px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+#main-content #nav-bar .bdv_cell .tags_section .tag-list .multiple-option-tag ul, #main-content #nav-bar .img_lib_cell .tags_section .tag-list .multiple-option-tag ul {
+  display: none;
+}
+#main-content #nav-bar .bdv_cell .tags_section .tag-list .multiple-option-tag:hover ul, #main-content #nav-bar .img_lib_cell .tags_section .tag-list .multiple-option-tag:hover ul {
+  display: flex;
 }
 #search-bar {
   display: flex;
@@ -180,6 +203,7 @@ body {
   height: auto;
   width: 100%;
   border-radius: 0px 0px 10px 10px;
+  /* Add transition effect for smooth animation */
 }
 #packages-ul .package-cell .main-cell .tags-section ul {
   display: flex;

@@ -15,8 +15,7 @@ body {
     #nav-bar {
         display: flex;
         width: 70%;
-        align-items: center;
-        column-gap: 2vw;
+        align-items: flex-start;
 
         padding-bottom: 5vh;
         border-bottom: solid 1px lightgray;
@@ -51,7 +50,7 @@ body {
                 width: 100%;
                 justify-content: center;
 
-                ul {
+                .tag-list { //Unordered List, ul
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: center;
@@ -65,13 +64,13 @@ body {
                     margin: 0;
                     
     
-                    li {
+                    li { //each list-item representing the tag
                         display: flex;
                         column-gap: 1vw;
                         border-radius: 10px;
                         height: 5vh;
     
-                        a {
+                        a { //Text
                             display: flex;
                             justify-content: center;
                             align-items: center;
@@ -94,16 +93,17 @@ body {
                         //     height: auto;
                         // }
 
-                        img {
+                        img { //Image/icon
                             max-height: 30%;
                             width: auto;
                             object-fit: contain;
                             padding: 0;
                             margin: 0;
                         }
+
                     }
     
-                    li {
+                    .single-option-tag, .multiple-option-tag { //Remove shadow on tag
                         // background-color: #f3f3f3;
                         border-radius: 20px;
                         // box-shadow: 0px 1px 2px rgba(0,0,0,0.15), 0px 2px 4px rgba(0,0,0,0.15);
@@ -111,11 +111,48 @@ body {
                     }
     
     
-                    li:hover {
+                    .single-option-tag:hover, .multiple-option-tag:hover { //Add shadow to tag
                         // background-color: #e0e0e0;
                         box-shadow: 0px 2px 4px rgba(0,0,0,0.25), 0px 4px 8px rgba(0,0,0,0.25);
                     }
+
+                    //Submenu tags for 'tutorial' tag
+                    .multiple-option-tag {
+                        position: relative;
+
+                        ul {
+                            margin-top: 1vh;
+                            background-color: lightgray;
+                            border-radius: 10px;
+                            position: absolute;
+                            top: 100%;
+                            left: 0;
+                            padding: 0;
+                            list-style-type: none;
+                            width: 100%;
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 10px;
+                        }
+
+                        ul { //Hide submenu ul by default
+                            display: none;
+                        }
+                    }
+
+                    .multiple-option-tag:hover {
+                        ul { //Un-hide/make the submeny appear at hover!
+                            display: flex;
+                        }
+                    }
+
+                    
                 }
+
+
+                
             }
         }
 
@@ -297,7 +334,43 @@ body {
                         background-color: #e0e0e0;
                         box-shadow: 0px 2px 4px rgba(0,0,0,0.25), 0px 4px 8px rgba(0,0,0,0.25);
                     }
+
+
+                    
                 }
+
+                
+
+                
+                
+                /* Add transition effect for smooth animation */
+                // ul li {
+                //     transition: all 0.3s;
+                //     overflow: hidden; /* Ensure the content doesn't overflow */
+                // }
+                
+                // /* Adjust the width of the list item when hovered */
+                // ul li.tutorial-item:hover {
+                //     width: 200px;
+                //     background-color: lightgray;
+                // }
+                
+                // /* Show the nested ul when the parent list item is hovered */
+                // ul li.tutorial-item:hover > ul {
+                //     display: block;
+                //     animation: extend-list-item 0.3s forwards;
+                // }
+                
+                // /* Animation to extend the list item */
+                // @keyframes extend-list-item {
+                //     from {
+                //     max-height: 0;
+                //     }
+                //     to {
+                //     max-height: 1000px; /* Adjust the value based on your needs */
+                //     }
+                // }
+  
             }
         }    
     }
