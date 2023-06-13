@@ -9,8 +9,8 @@ function searchPackages() {
 
     // loop through the h1 and p elements and hide/show the list item based on the search value
     for (let i = 0; i < packageTitles.length; i++) {
-        let listItem = packageTitles[i].parentElement.parentElement.parentElement.parentElement;
-        let packageCard = packageTitles[i].parentElement.parentElement;
+        let listItem = packageTitles[i].parentElement.parentElement.parentElement;
+        let packageCard = packageTitles[i].parentElement;
 
         if (packageTitles[i].innerHTML.toLowerCase().indexOf(searchValue) > -1 || packageDescriptions[i].innerHTML.toLowerCase().indexOf(searchValue) > -1) {
             // show the list item

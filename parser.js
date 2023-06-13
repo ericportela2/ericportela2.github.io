@@ -12,11 +12,50 @@ http.onload = function() {
 
         for (let package of packages) {
             // console.log(package);
+
+
+            //Multiple tutorial links
+            //In other words if value is an array, we should display the submenu else no submenu
+            let tutorial_li = ``;
+
+            if (Array.isArray(package.tutorial)) {
+
+                let listItems = ``;
+
+                let count = 1;
+                for (let option of package.tutorial) {
+                    listItems += `<li><a href="${option}">Tutorial ${count} </a></li>`;
+                    count ++;
+                }
+
+                tutorial_li = `
+                <li class="multiple-option-tag">
+                    <a>
+                        <img src="Assets/Icons/tutorial_icon.svg">
+                        Tutorial
+                    </a>`
+                + 
+                    `<ul>`
+                +
+                    listItems
+                +
+                    `</ul>
+                </li>`;
+            } else {
+                tutorial_li = `
+                <li class="single-option-tag">
+                    <a href="${package.tutorial}">
+                        <img src="Assets/Icons/tutorial_icon.svg">
+                        Tutorial
+                    </a>
+                </li>
+                `;
+            }
+
+            //Complete HTML Output
             output += `
             <li>
             <div class="package-cell">
-
-                <div class="main-cell">
 
                     <div class="content">
                         <img src="${package.image}" alt="Java Package Logo" class="card-img">
@@ -33,43 +72,40 @@ http.onload = function() {
         
                     <div class="tags-section">
 
-                        <ul>
-                            <li>
+                        <ul class="tag-list">
+                            <li class="single-option-tag">
                                 <a href="${package.citation}">
                                     <img src="Assets/Icons/scientific_journal_icon.svg">
                                     Article
                                 </a>
                             </li>
 
-                            <li>
+                            <li class="single-option-tag">
                                 <a href="${package.github}">
                                     <img src="Assets/Icons/github_icon.svg">
                                     GitHub
                                 </a>
                             </li>
 
-                            <li>
+                            <li class="single-option-tag">
                                 <a href="${package.documentation}">
                                     <img src="Assets/Icons/documentation_icon.svg">
                                     Documentation
                                 </a>
                             </li>
 
-                            <li>
+                            <li class="single-option-tag">
                                 <a href="${package.website}">
                                     <img src="Assets/Icons/website_icon.svg">
                                     Website
                                 </a>
                             </li>
-
-                            <li>
-                                <a href="${package.tutorial}">
-                                    <img src="Assets/Icons/tutorial_icon.svg">
-                                    Tutorial
-                                </a>
-                            </li>
-
-                            <li>
+                            `
+                            +
+                            tutorial_li
+                            +
+                            `
+                            <li class="single-option-tag">
                                 <a href="${package.fiji_imagej}">
                                     <img src="Assets/Icons/fiji_icon.svg">
                                     FIJI
@@ -79,8 +115,6 @@ http.onload = function() {
         
                     </div>
         
-                </div>
-
             </div>
             </li>
             `;

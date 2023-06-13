@@ -30,6 +30,7 @@ Make sure that the JSON file you add follows the correct format to be included i
 - Multiple JSON-objects are separated by commas
 - Each JSON-object in the file must have the following format
 - Note that 'image'-key can either be specified by the image-name or full path to the image. When 'GenerateJSON.java is run, the value will automatically be updated to the correct path.'
+- Note that 'tutorial'-key can either be one individual link (String) or an Array containing several links (Strings). In the latter case, a submenu will appear at hover over the tutorial tag, listing all links provided.'
 
 ```
 {
