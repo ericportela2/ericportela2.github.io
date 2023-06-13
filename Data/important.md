@@ -27,7 +27,7 @@ Make sure that the JSON file you add follows the correct format to be included i
 **Format of JSON-object**
 
 - JSON-objects must be in an array []
-- Multiple JSON-object are separated by commas
+- Multiple JSON-objects are separated by commas
 - Each JSON-object in the file must have the following format
 - Note that 'image'-key can either be specified by the image-name or full path to the image. When 'GenerateJSON.java is run, the value will automatically be updated to the correct path.'
 
