@@ -13,9 +13,13 @@ http.onload = function() {
         for (let package of packages) {
             // console.log(package);
 
+            // STEP 1: Check if 'tutorial' tag is array or string
+            //-------------------------------------------------------------
+            // DESCRIPTION...
+            // Essentially if value is an array of several links, we should 
+            // display the submenu else no submenu only button with link.
+            //-------------------------------------------------------------
 
-            //Multiple tutorial links
-            //In other words if value is an array, we should display the submenu else no submenu
             let tutorial_li = ``;
 
             if (Array.isArray(package.tutorial)) {
@@ -52,6 +56,22 @@ http.onload = function() {
                 `;
             }
 
+            // STEP 2: Check if 'citation' tag is preprint (true/false)
+            //-------------------------------------------------------------
+            // DESCRIPTION...
+            // Essentially this change is reflected through the name/title of 
+            // the tag. Either article or preprint.
+            //-------------------------------------------------------------
+
+            let preprint_article = ``
+            
+            if (package.citation.preprint) {
+                preprint_article = `Preprint`
+            } else {
+                preprint_article = `Article`
+            }
+
+
             //Complete HTML Output
             output += `
             <li>
@@ -74,9 +94,9 @@ http.onload = function() {
 
                         <ul class="tag-list">
                             <li class="single-option-tag">
-                                <a href="${package.citation}">
+                                <a href="${package.citation.link}">
                                     <img src="Assets/Icons/scientific_journal_icon.svg">
-                                    Article
+                                    ${preprint_article}
                                 </a>
                             </li>
 

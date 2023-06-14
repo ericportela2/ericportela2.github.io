@@ -48,7 +48,7 @@ public class GenerateJSON {
 
         //Change as per request, randomly iterating over dir
         List<File> files = new ArrayList<>(Arrays.asList(fileArray));
-        Collections.shuffle(files);
+        Collections.shuffle(files); //Randomly permutes the specified list using a default source of randomness
 
         // Remove files with names "main.json" or "important.md"
         files.removeIf((file) -> file.getName().equals("main.json") || file.getName().equals("important.md"));
@@ -75,7 +75,7 @@ public class GenerateJSON {
 
         int count = 0;
 
-        List<File> files = shuffleFiles(dir.listFiles()); //Shuffle the files, rando   
+        List<File> files = shuffleFiles(dir.listFiles()); //Shuffle the files, randomly
 
         for (File f: files) { 
         // for (File f: dir.listFiles()) {
