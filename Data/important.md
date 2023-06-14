@@ -31,6 +31,7 @@ Make sure that the JSON file you add follows the correct format to be included i
 - Each JSON-object in the file must have the following format
 - Note that 'image'-key can either be specified by the image-name or full path to the image. When 'GenerateJSON.java is run, the value will automatically be updated to the correct path.'
 - Note that 'tutorial'-key can either be one individual link (String) or an Array containing several links (Strings). In the latter case, a submenu will appear at hover over the tutorial tag, listing all links provided.'
+- Note that 'citation'-key holds an object which in turn contains two keys. 'link'-key and 'preprint'-key. The first is self-explanatory, but the latter one is of boolean type, specifying if citation is a preprint or an article. The value affects the name of the tag itself in the GUI.'
 
 ```
 {
@@ -38,7 +39,8 @@ Make sure that the JSON file you add follows the correct format to be included i
 	"image": "Assets/Images/bigdataprocessor_logo.svg",
 	"category": "Fiji-plugin for Big Data Processing",
 	"documentation": ["link to documents", "https://github.com/bigdataprocessor/bigdataprocessor2/blob/master/README.md"],
-	"citation": "https://doi.org/10.1093/bioinformatics/btab106",
+	"citation": {"link": "https://doi.org/10.1093/bioinformatics/btab106", 
+				"preprint": false},
 	"github": "https://github.com/bigdataprocessor/bigdataprocessor2", 
 	"fiji_imagej": "https://imagej.net/plugins/big-data-processor-2",
 	"website": "https://forum.image.sc/t/bigdataprocessor/34963/9",
@@ -58,7 +60,8 @@ Make sure that the JSON file you add follows the correct format to be included i
 		"image": "Assets/Images/bigdataprocessor_logo.svg",
 		"category": "Fiji-plugin for Big Data Processing",
 		"documentation": ["link to documents", "https://github.com/bigdataprocessor/bigdataprocessor2/blob/master/README.md"],
-		"citation": "https://doi.org/10.1093/bioinformatics/btab106",
+		"citation": {"link": "https://doi.org/10.1093/bioinformatics/btab106", 
+					"preprint": false},
 		"github": "https://github.com/bigdataprocessor/bigdataprocessor2", 
 		"fiji_imagej": "https://imagej.net/plugins/big-data-processor-2",
 		"website": "https://forum.image.sc/t/bigdataprocessor/34963/9",
@@ -71,7 +74,8 @@ Make sure that the JSON file you add follows the correct format to be included i
 		"image": "Assets/Images/bigdataprocessor_logo.svg",
 		"category": "Fiji-plugin for Big Data Processing",
 		"documentation": ["link to documents", "https://github.com/bigdataprocessor/bigdataprocessor2/blob/master/README.md"],
-		"citation": "https://doi.org/10.1093/bioinformatics/btab106",
+		"citation": {"link": "https://doi.org/10.1093/bioinformatics/btab106", 
+					"preprint": false},
 		"github": "https://github.com/bigdataprocessor/bigdataprocessor2", 
 		"fiji_imagej": "https://imagej.net/plugins/big-data-processor-2",
 		"website": "https://forum.image.sc/t/bigdataprocessor/34963/9",

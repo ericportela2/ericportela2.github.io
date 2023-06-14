@@ -259,7 +259,9 @@ public class GenerateJSON {
                             + "- Multiple JSON-objects are separated by commas\n"
                             + "- Each JSON-object in the file must have the following format\n"
                             + "- Note that 'image'-key can either be specified by the image-name or full path to the image. When 'GenerateJSON.java is run, the value will automatically be updated to the correct path.'\n"
-                            + "- Note that 'tutorial'-key can either be one individual link (String) or an Array containing several links (Strings). In the latter case, a submenu will appear at hover over the tutorial tag, listing all links provided.'\n\n"
+                            + "- Note that 'tutorial'-key can either be one individual link (String) or an Array containing several links (Strings). In the latter case, a submenu will appear at hover over the tutorial tag, listing all links provided.'\n"
+                            + "- Note that 'citation'-key holds an object which in turn contains two keys. 'link'-key and 'preprint'-key. The first is self-explanatory, but the latter one is of boolean type, specifying if citation is a preprint or an article. The value affects the name of the tag itself in the GUI.'\n\n"
+
 
 
                             + "```\n"
@@ -269,7 +271,7 @@ public class GenerateJSON {
                                 + "\t\"image\": \"Assets/Images/bigdataprocessor_logo.svg\",\n"
                                 + "\t\"category\": \"Fiji-plugin for Big Data Processing\",\n"
                                 + "\t\"documentation\": [\"link to documents\", \"https://github.com/bigdataprocessor/bigdataprocessor2/blob/master/README.md\"],\n"
-                                + "\t\"citation\": \"https://doi.org/10.1093/bioinformatics/btab106\",\n"
+                                + "\t\"citation\": {\"link\": \"https://doi.org/10.1093/bioinformatics/btab106\", \n" + "\t\t\t\t\"preprint\": false},\n"
                                 + "\t\"github\": \"https://github.com/bigdataprocessor/bigdataprocessor2\", \n"
                                 + "\t\"fiji_imagej\": \"https://imagej.net/plugins/big-data-processor-2\",\n"
                                 + "\t\"website\": \"https://forum.image.sc/t/bigdataprocessor/34963/9\",\n"
@@ -291,7 +293,7 @@ public class GenerateJSON {
                                 + "\t\t\"image\": \"Assets/Images/bigdataprocessor_logo.svg\",\n"
                                 + "\t\t\"category\": \"Fiji-plugin for Big Data Processing\",\n"
                                 + "\t\t\"documentation\": [\"link to documents\", \"https://github.com/bigdataprocessor/bigdataprocessor2/blob/master/README.md\"],\n"
-                                + "\t\t\"citation\": \"https://doi.org/10.1093/bioinformatics/btab106\",\n"
+                                + "\t\t\"citation\": {\"link\": \"https://doi.org/10.1093/bioinformatics/btab106\", \n" + "\t\t\t\t\t\"preprint\": false},\n"
                                 + "\t\t\"github\": \"https://github.com/bigdataprocessor/bigdataprocessor2\", \n"
                                 + "\t\t\"fiji_imagej\": \"https://imagej.net/plugins/big-data-processor-2\",\n"
                                 + "\t\t\"website\": \"https://forum.image.sc/t/bigdataprocessor/34963/9\",\n"
@@ -305,7 +307,7 @@ public class GenerateJSON {
                                 + "\t\t\"image\": \"Assets/Images/bigdataprocessor_logo.svg\",\n"
                                 + "\t\t\"category\": \"Fiji-plugin for Big Data Processing\",\n"
                                 + "\t\t\"documentation\": [\"link to documents\", \"https://github.com/bigdataprocessor/bigdataprocessor2/blob/master/README.md\"],\n"
-                                + "\t\t\"citation\": \"https://doi.org/10.1093/bioinformatics/btab106\",\n"
+                                + "\t\t\"citation\": {\"link\": \"https://doi.org/10.1093/bioinformatics/btab106\", \n" + "\t\t\t\t\t\"preprint\": false},\n"
                                 + "\t\t\"github\": \"https://github.com/bigdataprocessor/bigdataprocessor2\", \n"
                                 + "\t\t\"fiji_imagej\": \"https://imagej.net/plugins/big-data-processor-2\",\n"
                                 + "\t\t\"website\": \"https://forum.image.sc/t/bigdataprocessor/34963/9\",\n"

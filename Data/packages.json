@@ -8,7 +8,8 @@
 
         "documentation": ["link to documents", "https://github.com/bigdataprocessor/bigdataprocessor2/blob/master/README.md"],
 
-        "citation": "https://doi.org/10.1093/bioinformatics/btab106",
+        "citation": {"link": "https://doi.org/10.1093/bioinformatics/btab106", 
+                     "preprint": false},
 
         "github": "https://github.com/bigdataprocessor/bigdataprocessor2", 
 
@@ -33,7 +34,8 @@
 
         "documentation": ["link to documents", "https://github.com/bigdataprocessor/bigdataprocessor2/blob/master/README.md"],
 
-        "citation": "https://doi.org/10.1093/bioinformatics/btab106",
+        "citation": {"link": "https://doi.org/10.1093/bioinformatics/btab106", 
+                     "preprint": false},
 
         "github": "https://github.com/bigdataprocessor/bigdataprocessor2", 
 
@@ -58,7 +60,8 @@
 
         "documentation": ["link to documents", "https://github.com/bigdataprocessor/bigdataprocessor2/blob/master/README.md"],
 
-        "citation": "https://doi.org/10.1093/bioinformatics/btab106",
+        "citation": {"link": "https://doi.org/10.1093/bioinformatics/btab106", 
+                     "preprint": false},
 
         "github": "https://github.com/bigdataprocessor/bigdataprocessor2", 
 
@@ -83,7 +86,8 @@
 
         "documentation": ["link to documents", "https://github.com/bigdataprocessor/bigdataprocessor2/blob/master/README.md"],
 
-        "citation": "https://doi.org/10.1093/bioinformatics/btab106",
+        "citation": {"link": "https://doi.org/10.1093/bioinformatics/btab106", 
+                     "preprint": false},
 
         "github": "https://github.com/bigdataprocessor/bigdataprocessor2", 
 
@@ -108,7 +112,8 @@
 
         "documentation": ["link to documents", "https://github.com/bigdataprocessor/bigdataprocessor2/blob/master/README.md"],
 
-        "citation": "https://doi.org/10.1093/bioinformatics/btab106",
+        "citation": {"link": "https://doi.org/10.1093/bioinformatics/btab106", 
+                     "preprint": false},
 
         "github": "https://github.com/bigdataprocessor/bigdataprocessor2", 
 
@@ -133,8 +138,9 @@
 
         "documentation": ["link to documents", "https://github.com/bigdataprocessor/bigdataprocessor2/blob/master/README.md"],
 
-        "citation": "https://doi.org/10.1093/bioinformatics/btab106",
-
+        "citation": {"link": "https://doi.org/10.1093/bioinformatics/btab106", 
+                     "preprint": false},
+                     
         "github": "https://github.com/bigdataprocessor/bigdataprocessor2", 
 
         "fiji_imagej": "https://imagej.net/plugins/big-data-processor-2",
