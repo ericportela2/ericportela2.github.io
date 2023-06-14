@@ -1,4 +1,8 @@
 import java.io.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 public class GenerateJSON {
 
@@ -32,6 +36,26 @@ public class GenerateJSON {
         generateAboutFile(folderPath);
     }
 
+    /**
+     * Shuffles the provided array of files, removes files with names "main.json" or "important.md",
+     * and returns the resulting list of files.
+     *
+     * @param fileArray the array of files to shuffle and filter
+     * @return the shuffled and filtered list of files
+     */
+
+    private List<File> shuffleFiles(File[] fileArray) {
+
+        //Change as per request, randomly iterating over dir
+        List<File> files = new ArrayList<>(Arrays.asList(fileArray));
+        Collections.shuffle(files);
+
+        // Remove files with names "main.json" or "important.md"
+        files.removeIf((file) -> file.getName().equals("main.json") || file.getName().equals("important.md"));
+
+        return files;
+    }
+
 
     /**
      * Reads all files (excluding "main.json" and "important.md") in a given directory and concatenates 
@@ -50,8 +74,11 @@ public class GenerateJSON {
         String concatenatedJSONString = "[ \n\n";
 
         int count = 0;
-        
-        for (File f: dir.listFiles()) {
+
+        List<File> files = shuffleFiles(dir.listFiles()); //Shuffle the files, rando   
+
+        for (File f: files) { 
+        // for (File f: dir.listFiles()) {
 
             if (f.isFile() && !f.getName().equals("main.json") && !f.getName().equals("important.md")) { //Ignores the 2 generated files
                 String filePath = folderPath + f.getName();
@@ -98,7 +125,7 @@ public class GenerateJSON {
                     
                     jsonString = jsonString.substring(2, jsonString.length()-2); //Removes original '[' and ']'
 
-                    if (count < dir.listFiles().length-1) {
+                    if (count < files.size()-1) {
                         jsonString += ",";
                     }
 
