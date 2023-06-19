@@ -92,7 +92,9 @@ body {
                     display: none;
                 }
     
+                //Extend the hoverable area between tag and submenu
                 ul:before {
+                    // background-color: red; //uncomment this row to see the area
                     content: "";
                     display: block;
                     height: 1vh;
@@ -307,6 +309,10 @@ body {
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
+}
+
+.filter-area {
+    margin-top: 2vh;
 }
 
 

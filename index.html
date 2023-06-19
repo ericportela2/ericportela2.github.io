@@ -37,14 +37,14 @@
                 <div class="tags-section">
                     <ul class="tag-list">
                         <li class="single-option-tag">
-                            <a href="LÄNK HÄR!" target="_blank">
+                            <a href="https://doi.org/10.1093/bioinformatics/bts543" target="_blank">
                                 <img src="Assets/Icons/scientific_journal_icon.svg">
                                 Article
                             </a>
                         </li>
 
                         <li class="single-option-tag">
-                            <a href="LÄNK HÄR!" target="_blank">
+                            <a href="https://github.com/imglib/imglib2" target="_blank">
                                 <img src="Assets/Icons/github_icon.svg">
                                 GitHub
                             </a>
@@ -83,6 +83,14 @@
                                 FIJI
                             </a>
                         </li>
+
+                        <li class="single-option-tag">
+                            <a href="LÄNK HÄR!" target="_blank">
+                                <img src="Assets/Icons/website_icon.svg">
+                                Blog
+                            </a>
+                        </li>
+
                     </ul>
                 </div>
 
@@ -118,21 +126,21 @@
                 <div class="tags-section">
                     <ul class="tag-list">
                         <li class="single-option-tag">
-                            <a href="LÄNK HÄR!" target="_blank">
+                            <a href="https://www.nature.com/articles/nmeth.3392" target="_blank">
                                 <img src="Assets/Icons/scientific_journal_icon.svg">
                                 Article
                             </a>
                         </li>
 
                         <li class="single-option-tag">
-                            <a href="LÄNK HÄR!" target="_blank">
+                            <a href="https://github.com/bigdataviewer" target="_blank">
                                 <img src="Assets/Icons/github_icon.svg">
                                 GitHub
                             </a>
                         </li>
 
                         <li class="single-option-tag">
-                            <a href="LÄNK HÄR!" target="_blank">
+                            <a href="https://imagej.net/plugins/bdv/" target="_blank">
                                 <img src="Assets/Icons/documentation_icon.svg">
                                 Documentation
                             </a>
@@ -164,6 +172,13 @@
                                 FIJI
                             </a>
                         </li>
+
+                        <li class="single-option-tag">
+                            <a href="LÄNK HÄR!" target="_blank">
+                                <img src="Assets/Icons/website_icon.svg">
+                                Blog
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
@@ -174,12 +189,19 @@
         <h1>Ecosystem</h1>
 
         <input type="text" id="search-bar" onkeyup="searchPackages()" placeholder="Search for softwares using ImgLib2/BDV..." title="Type in a package">
-
+        
+        <div class="filter-area">
+            <button onclick="generatePackagesHTML(true)" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer;">Sort Alphabetically</button>
+            <button onclick="generatePackagesHTML(false)" style="padding: 10px 20px; background-color: #008CBA; color: white; border: none; border-radius: 4px; cursor: pointer;">Sort By Default</button>    
+        </div>
+        
         <ul id="packages-ul">
             
         </ul>
 
     </div>
+
+    
 
 
     <!-- <div id="main-content">

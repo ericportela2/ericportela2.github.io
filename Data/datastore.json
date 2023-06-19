@@ -1,0 +1,32 @@
+[
+    {
+        "name": "DataStore",
+
+        "image": "Assets/Images/datastore_pseudologo.svg",
+
+        "category": "Fiji-plugin for Big Data Processing",
+
+        "documentation": ["link to documents", "https://github.com/fiji-hpc/hpc-datastore/blob/master/doc/OUTLINE.md"],
+
+        "citation": {"link": "none yet", 
+                     "name_tag": "Article"},
+
+        "github": "https://github.com/fiji-hpc/hpc-datastore",
+
+        "fiji_imagej": "N/A",
+
+        "website": "https://github.com/fiji-hpc/hpc-datastore",
+
+        "tutorial": [
+            {"name_tag": "Tutorial 1", "link": "https://github.com/fiji-hpc/hpc-datastore"}, 
+            {"name_tag": "Tutorial 2", "link": ""}, 
+            {"name_tag": "Tutorial 3", "link": ""}
+        ],
+
+        "documentation&tutorial": false,
+
+        "description": "The DataStore is shortest described as BigDataServer that can also accept images besides serving them. In other words, it is a REST HTTP-based client-server for downloading/uploading chunks from images from/to a remote dataset. The server is storing image data using the N5 on disk in a BigDataViewer unique XML/N5 dialect. The server communicates with its clients using our own simple protocol.",
+
+        "blog": null
+    }
+]

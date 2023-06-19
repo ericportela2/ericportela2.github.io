@@ -1,99 +1,272 @@
-fetch('Data/main.json')
-  .then(response => response.json())
-  .then(packages => {
-    let output = "";
-
-    for (let pack of packages) {
-      let tutorialLi = "";
-
-      if (Array.isArray(pack.tutorial)) {
-        let listItems = "";
-        let count = 1;
-
-        for (let option of pack.tutorial) {
-          listItems += `<li><a href="${option}">Tutorial ${count}</a></li>`;
-          count++;
+function generatePackagesHTML(sortAlphabetically) {
+    fetch('Data/main.json')
+      .then(response => response.json())
+      .then(packages => {
+        // Sort the packages alphabetically if `sortAlphabetically` is true
+        if (sortAlphabetically) {
+          packages.sort((a, b) => {
+            if (a.name < b.name) {
+              return -1;
+            }
+            if (a.name > b.name) {
+              return 1;
+            }
+            return 0;
+          });
         }
+  
+        let output = ""; //Defdine variable for holding the whole generated HTML
 
-        tutorialLi = `
-          <li class="multiple-option-tag">
-            <a>
-              <img src="Assets/Icons/tutorial_icon.svg">
-              Tutorial
-            </a>
-            <ul>
-              ${listItems}
-            </ul>
-          </li>
-        `;
-      } else {
-        tutorialLi = `
-          <li class="single-option-tag">
-            <a href="${pack.tutorial}">
-              <img src="Assets/Icons/tutorial_icon.svg">
-              Tutorial
-            </a>
-          </li>
-        `;
-      }
+        
+        for (let pack of packages) {
+            
+            let tutorialLi = "";
 
-      let preprintArticle = pack.citation.preprint ? "Preprint" : "Article";
+            //PART 1: Ierate over packages in order to check for multiple tutorial links
+            //==> Multiple tutorial-links = submenu/drop down
+            //==> Single tutorial-link = solo button/tag
+  
+          if (Array.isArray(pack.tutorial)) {
+            let listItems = "";
+            let count = 1;
+  
+            for (let tutorial of pack.tutorial) {
+              listItems += `<li><a href="${tutorial.link}" target="_blank">${tutorial.name_tag}</a></li>`;
+              count++;
+            }
+  
+            tutorialLi = `
+              <li class="multiple-option-tag">
+                <a>
+                  <img src="Assets/Icons/tutorial_icon.svg">
+                  Tutorial
+                </a>
+                <ul>
+                  ${listItems}
+                </ul>
+              </li>
+            `;
+          } else {
+            tutorialLi = `
+              <li class="single-option-tag">
+                <a href="${pack.tutorial}" target="_blank">
+                  <img src="Assets/Icons/tutorial_icon.svg">
+                  Tutorial
+                </a>
+              </li>
+            `;
+          }
 
-      output += `
-        <li>
-          <div class="package-cell">
-            <div class="content">
-              <img src="${pack.image}" alt="Java Package Logo" class="card-img">
-              <div id="text-section">
-                <h1 id="title">${pack.name}</h1>
-                <p id="subtitle">Ecosystem</p>
-                <p id="description-text">${pack.description}</p>
-              </div>
-            </div>
-            <div class="tags-section">
-              <ul class="tag-list">
-                <li class="single-option-tag">
-                  <a href="${pack.citation.link}">
+          let tagName = pack.citation.name_tag;
+
+
+          let citationLi = `
+            <li class="single-option-tag">
+                <a href="${pack.citation.link}" target="_blank">
                     <img src="Assets/Icons/scientific_journal_icon.svg">
-                    ${preprintArticle}
-                  </a>
-                </li>
-                <li class="single-option-tag">
-                  <a href="${pack.github}">
+                    ${tagName}
+                </a>
+            </li>`;
+
+
+          let ghLi = `
+            <li class="single-option-tag">
+                <a href="${pack.github}" target="_blank">
                     <img src="Assets/Icons/github_icon.svg">
                     GitHub
-                  </a>
-                </li>
-                <li class="single-option-tag">
-                  <a href="${pack.documentation}">
+                </a>
+            </li>`;
+
+
+          let docLi = `
+            <li class="single-option-tag">
+                <a href="${pack.documentation}" target="_blank">
                     <img src="Assets/Icons/documentation_icon.svg">
                     Documentation
-                  </a>
-                </li>
-                <li class="single-option-tag">
-                  <a href="${pack.website}">
+                </a>
+            </li>`;
+
+
+          let webLi = `
+            <li class="single-option-tag">
+                <a href="${pack.website}" target="_blank">
                     <img src="Assets/Icons/website_icon.svg">
                     Website
-                  </a>
-                </li>
-                ${tutorialLi}
-                <li class="single-option-tag">
-                  <a href="${pack.fiji_imagej}">
+                </a>
+            </li>`;
+
+
+          let tutLi = tutorialLi;
+
+          let fijiLi = `
+            <li class="single-option-tag">
+                <a href="${pack.fiji_imagej}" target="_blank">
                     <img src="Assets/Icons/fiji_icon.svg">
                     FIJI
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </li>
-      `;
-    }
+                </a>
+            </li>`;
 
-    var jsonToHtmlTag = document.getElementById("packages-ul");
-    jsonToHtmlTag.innerHTML = output;
-  })
-  .catch(error => console.error(error));
+
+            
+            let blogLi = ``;
+            
+            if (pack.blog != null) {
+                blogli = `
+                    <li class="single-option-tag">
+                        <a href="${pack.blog}" target="_blank">
+                            <img src="Assets/Icons/fiji_icon.svg">
+                            Blog
+                        </a>
+                    </li>`;
+            }
+
+            let tagsSection = `
+                <div class="tags-section">
+                    <ul class="tag-list">
+                        ${citationLi}
+                        ${ghLi}
+                        ${docLi}
+                        ${webLi}
+                        ${tutLi}
+                        ${fijiLi}
+                        ${blogLi}
+                    </ul>
+                <div>`;
+
+  
+        //   let preprintArticle = pack.citation.preprint ? "Preprint" : "Article";
+  
+          output += `
+            <li>
+              <div class="package-cell">
+                <div class="content">
+                  <img src="${pack.image}" alt="Java Package Logo" class="card-img">
+                  <div id="text-section">
+                    <h1 id="title">${pack.name}</h1>
+                    <p id="subtitle">${pack.category}</p>
+                    <p id="description-text">${pack.description}</p>
+                  </div>
+                </div>
+
+
+                ${tagsSection}
+              </div>
+            </li>
+          `;
+        }
+  
+        var jsonToHtmlTag = document.getElementById("packages-ul");
+        jsonToHtmlTag.innerHTML = output;
+      })
+      .catch(error => console.error(error));
+  }
+  
+  // Call the function with `true` as the argument to sort the packages alphabetically
+  generatePackagesHTML(false);
+  
+
+  
+// fetch('Data/main.json')
+//   .then(response => response.json())
+//   .then(packages => {
+//     let output = "";
+
+//     for (let pack of packages) {
+//       let tutorialLi = "";
+
+//       if (Array.isArray(pack.tutorial)) {
+//         let listItems = "";
+//         let count = 1;
+
+//         for (let option of pack.tutorial) {
+//           listItems += `<li><a href="${option}">Tutorial ${count}</a></li>`;
+//           count++;
+//         }
+
+//         tutorialLi = `
+//           <li class="multiple-option-tag">
+//             <a>
+//               <img src="Assets/Icons/tutorial_icon.svg">
+//               Tutorial
+//             </a>
+//             <ul>
+//               ${listItems}
+//             </ul>
+//           </li>
+//         `;
+//       } else {
+//         tutorialLi = `
+//           <li class="single-option-tag">
+//             <a href="${pack.tutorial}">
+//               <img src="Assets/Icons/tutorial_icon.svg">
+//               Tutorial
+//             </a>
+//           </li>
+//         `;
+//       }
+
+//       let preprintArticle = pack.citation.preprint ? "Preprint" : "Article";
+
+//       output += `
+//         <li>
+//           <div class="package-cell">
+//             <div class="content">
+//               <img src="${pack.image}" alt="Java Package Logo" class="card-img">
+//               <div id="text-section">
+//                 <h1 id="title">${pack.name}</h1>
+//                 <p id="subtitle">Ecosystem</p>
+//                 <p id="description-text">${pack.description}</p>
+//               </div>
+//             </div>
+//             <div class="tags-section">
+//               <ul class="tag-list">
+//                 <li class="single-option-tag">
+//                   <a href="${pack.citation.link}">
+//                     <img src="Assets/Icons/scientific_journal_icon.svg">
+//                     ${preprintArticle}
+//                   </a>
+//                 </li>
+//                 <li class="single-option-tag">
+//                   <a href="${pack.github}">
+//                     <img src="Assets/Icons/github_icon.svg">
+//                     GitHub
+//                   </a>
+//                 </li>
+//                 <li class="single-option-tag">
+//                   <a href="${pack.documentation}">
+//                     <img src="Assets/Icons/documentation_icon.svg">
+//                     Documentation
+//                   </a>
+//                 </li>
+//                 <li class="single-option-tag">
+//                   <a href="${pack.website}">
+//                     <img src="Assets/Icons/website_icon.svg">
+//                     Website
+//                   </a>
+//                 </li>
+//                 ${tutorialLi}
+//                 <li class="single-option-tag">
+//                   <a href="${pack.fiji_imagej}">
+//                     <img src="Assets/Icons/fiji_icon.svg">
+//                     FIJI
+//                   </a>
+//                 </li>
+//               </ul>
+//             </div>
+//           </div>
+//         </li>
+//       `;
+//     }
+
+//     var jsonToHtmlTag = document.getElementById("packages-ul");
+//     jsonToHtmlTag.innerHTML = output;
+//   })
+//   .catch(error => console.error(error));
+
+
+
+
+
 
 
 //OLD WORKING VERSION, BUT DEPENDING ON XMLHttpRequest
@@ -244,6 +417,10 @@ fetch('Data/main.json')
 //         json_to_html_tag.innerHTML = output;
 //     }
 // }
+
+
+
+
 
 
 

@@ -4,6 +4,10 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+//Ändra preprint till name_tag så att man kan själv bestämma namnet
+//Lägg till json object i tutorial-listan m 2 nycklar, link + name_tag, återigen så att man kan ändra namnet på taggen
+//Blogg-tag: https://doi.org/10.1093/bioinformatics/bts543
+
 public class GenerateJSON {
 
     //Attributes/Constants
@@ -261,7 +265,7 @@ public class GenerateJSON {
                             + "- Note that 'image'-key can either be specified by the image-name or full path to the image. When 'GenerateJSON.java is run, the value will automatically be updated to the correct path.'\n"
                             + "- Note that 'tutorial'-key can either be one individual link (String) or an Array containing several links (Strings). In the latter case, a submenu will appear at hover over the tutorial tag, listing all links provided.'\n"
                             + "- Note that 'citation'-key holds an object which in turn contains two keys. 'link'-key and 'preprint'-key. The first is self-explanatory, but the latter one is of boolean type, specifying if citation is a preprint or an article. The value affects the name of the tag itself in the GUI.'\n\n"
-
+                            + "- Note that 'blog'-key can either be null or a String containing the link to the blog."
 
 
                             + "```\n"
@@ -278,6 +282,7 @@ public class GenerateJSON {
                                 + "\t\"tutorial\": \"https://en.wikipedia.org/wiki/Joshua_Tree_National_Park\", \n"
                                 + "\t\"documentation&tutorial\": false,\n"
                                 + "\t\"description\": \"Suscipit inceptos est felis purus aenean aliquet adipiscing diam venenatis...\"\n"
+                                + "\t\"blog\": \"null\"\n"
                             + "}\n"
                             
                             +"```\n\n"
@@ -300,6 +305,7 @@ public class GenerateJSON {
                                 + "\t\t\"tutorial\": \"https://en.wikipedia.org/wiki/Joshua_Tree_National_Park\", \n"
                                 + "\t\t\"documentation&tutorial\": false,\n"
                                 + "\t\t\"description\": \"Suscipit inceptos est felis purus aenean aliquet adipiscing diam venenatis...\"\n"
+                                + "\t\t\"blog\": \"null\"\n"
                             + "\t},\n"
 
                             + "\t{\n"
@@ -314,6 +320,8 @@ public class GenerateJSON {
                                 + "\t\t\"tutorial\": \"https://en.wikipedia.org/wiki/Joshua_Tree_National_Park\", \n"
                                 + "\t\t\"documentation&tutorial\": false,\n"
                                 + "\t\t\"description\": \"Suscipit inceptos est felis purus aenean aliquet adipiscing diam venenatis...\"\n"
+                                + "\t\t\"blog\": \"null\"\n"
+
                             + "\t}\n\n"
 
                             + "] \n"

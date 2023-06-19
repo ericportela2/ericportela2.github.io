@@ -33,7 +33,7 @@ Make sure that the JSON file you add follows the correct format to be included i
 - Note that 'tutorial'-key can either be one individual link (String) or an Array containing several links (Strings). In the latter case, a submenu will appear at hover over the tutorial tag, listing all links provided.'
 - Note that 'citation'-key holds an object which in turn contains two keys. 'link'-key and 'preprint'-key. The first is self-explanatory, but the latter one is of boolean type, specifying if citation is a preprint or an article. The value affects the name of the tag itself in the GUI.'
 
-```
+- Note that 'blog'-key can either be null or a String containing the link to the blog.```
 {
 	"name": "Bigdataprocessor1",
 	"image": "Assets/Images/bigdataprocessor_logo.svg",
@@ -47,6 +47,7 @@ Make sure that the JSON file you add follows the correct format to be included i
 	"tutorial": "https://en.wikipedia.org/wiki/Joshua_Tree_National_Park", 
 	"documentation&tutorial": false,
 	"description": "Suscipit inceptos est felis purus aenean aliquet adipiscing diam venenatis..."
+	"blog": "null"
 }
 ```
 
@@ -68,6 +69,7 @@ Make sure that the JSON file you add follows the correct format to be included i
 		"tutorial": "https://en.wikipedia.org/wiki/Joshua_Tree_National_Park", 
 		"documentation&tutorial": false,
 		"description": "Suscipit inceptos est felis purus aenean aliquet adipiscing diam venenatis..."
+		"blog": "null"
 	},
 	{
 		"name": "Bigdataprocessor1",
@@ -82,6 +84,7 @@ Make sure that the JSON file you add follows the correct format to be included i
 		"tutorial": "https://en.wikipedia.org/wiki/Joshua_Tree_National_Park", 
 		"documentation&tutorial": false,
 		"description": "Suscipit inceptos est felis purus aenean aliquet adipiscing diam venenatis..."
+		"blog": "null"
 	}
 
 ] 

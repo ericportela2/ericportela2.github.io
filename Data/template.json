@@ -1,43 +1,28 @@
-[ 
-
-
-    {
-        "name": "DataStore",
-        "image": "Assets/Images/datastore_pseudologo.svg",
-        "category": "Fiji-plugin for Big Data Processing",
-        "documentation": ["link to documents", "https://github.com/fiji-hpc/hpc-datastore/blob/master/doc/OUTLINE.md"],
-        "citation": {"link": "none yet", 
-                     "name_tag": "Article"},
-        "github": "https://github.com/fiji-hpc/hpc-datastore",
-        "fiji_imagej": "N/A",
-        "website": "https://github.com/fiji-hpc/hpc-datastore",
-        "tutorial": [
-            {"name_tag": "Tutorial 1", "link": "https://github.com/fiji-hpc/hpc-datastore"}, 
-            {"name_tag": "Tutorial 2", "link": ""}, 
-            {"name_tag": "Tutorial 3", "link": ""}
-        ],
-        "documentation&tutorial": false,
-        "description": "The DataStore is shortest described as BigDataServer that can also accept images besides serving them. In other words, it is a REST HTTP-based client-server for downloading/uploading chunks from images from/to a remote dataset. The server is storing image data using the N5 on disk in a BigDataViewer unique XML/N5 dialect. The server communicates with its clients using our own simple protocol.",
-        "blog": null
-    },
+[
     {
         "name": "Bigdataprocessor2",
+
         "image": "Assets/Images/bigdataprocessor_logo.svg",
+
         "category": "Fiji-plugin for Big Data Processing",
+
         "documentation": ["link to documents", "https://github.com/bigdataprocessor/bigdataprocessor2/blob/master/README.md"],
+
         "citation": {"link": "https://doi.org/10.1093/bioinformatics/btab106", 
                      "name_tag": "Article"},
+
         "github": "https://github.com/bigdataprocessor/bigdataprocessor2", 
+
         "fiji_imagej": "https://imagej.net/plugins/big-data-processor-2",
+
         "tutorial": [
             {"name_tag": "Tutorial 1", "link": "https://academic.oup.com/bioinformatics/article/37/18/3079/6140778#supplementary-data"}, 
             {"name_tag": "Tutorial 2", "link": ""}, 
             {"name_tag": "Tutorial 3", "link": ""}
         ],
+        
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vestibulum feugiat dui ac consectetur. Vivamus nec eros non nunc malesuada efficitur. Aenean fringilla lorem sed lacinia consectetur. Integer varius elit nec nisl aliquet, id fermentum justo sagittis. Sed malesuada scelerisque libero nec convallis. Morbi at dolor in sem pulvinar aliquet nec vel quam. Proin vel convallis eros, in lacinia neque. Cras commodo elit nec nibh tincidunt aliquam. Etiam auctor velit ac justo placerat, a tristique justo fringilla. Nulla semper, eros non tristique tempor, arcu enim interdum ante, id malesuada ante lorem ac mi. Aliquam pellentesque nisl at quam aliquet, vel efficitur neque sagittis. Nulla facilisi. Curabitur nec malesuada mauris, at mattis ligula",
+
         "blog": null
  }
-
-
-
-]
+] 
