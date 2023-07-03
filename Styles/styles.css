@@ -30,6 +30,8 @@ body {
        column-gap: 1vw;
   border-radius: 10px;
   height: 5vh;
+  padding: 0;
+  margin: 0;
 }
 #packages-ul .package-cell .tags-section .tag-list li a, #main-content #nav-bar .img_lib_cell .tags-section .tag-list li a, #main-content #nav-bar .bdv_cell .tags-section .tag-list li a {
   display: flex;
@@ -45,6 +47,8 @@ body {
   font-weight: normal;
 }
 #packages-ul .package-cell .tags-section .tag-list li img, #main-content #nav-bar .img_lib_cell .tags-section .tag-list li img, #main-content #nav-bar .bdv_cell .tags-section .tag-list li img {
+  max-width: 10%;
+  height: auto;
   max-height: 30%;
   width: auto;
   -o-object-fit: contain;
@@ -53,8 +57,12 @@ body {
   margin: 0;
 }
 #packages-ul .package-cell .tags-section .tag-list .single-option-tag, #main-content #nav-bar .img_lib_cell .tags-section .tag-list .single-option-tag, #main-content #nav-bar .bdv_cell .tags-section .tag-list .single-option-tag, #packages-ul .package-cell .tags-section .tag-list .multiple-option-tag, #main-content #nav-bar .img_lib_cell .tags-section .tag-list .multiple-option-tag, #main-content #nav-bar .bdv_cell .tags-section .tag-list .multiple-option-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 5px; /* Adjust the padding as needed */
   border-radius: 20px;
   transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  background-color: #f3f3f3;
 }
 #packages-ul .package-cell .tags-section .tag-list .single-option-tag:hover, #main-content #nav-bar .img_lib_cell .tags-section .tag-list .single-option-tag:hover, #main-content #nav-bar .bdv_cell .tags-section .tag-list .single-option-tag:hover, #packages-ul .package-cell .tags-section .tag-list .multiple-option-tag:hover, #main-content #nav-bar .img_lib_cell .tags-section .tag-list .multiple-option-tag:hover, #main-content #nav-bar .bdv_cell .tags-section .tag-list .multiple-option-tag:hover {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25), 0px 4px 8px rgba(0, 0, 0, 0.25);
@@ -206,16 +214,6 @@ body {
   max-height: 200px;
   width: 200px;
   height: auto;
-}
-#packages-ul .package-cell .tags-section {
-  align-items: center;
-  padding: 3vw;
-  height: auto;
-  border-radius: 0px 0px 10px 10px;
-}
-#packages-ul .package-cell .tags-section .tag-list .single-option-tag, #packages-ul .package-cell .tags-section .tag-list .multiple-option-tag {
-  background-color: #f3f3f3;
-  height: 5vh;
 }
 #packages-ul .package-cell {
   transition: all 0.3s ease-in-out;

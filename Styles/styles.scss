@@ -32,6 +32,8 @@ body {
                 column-gap: 1vw;
                 border-radius: 10px;
                 height: 5vh; //in first 2 cells
+                padding: 0;
+                margin: 0;
     
                 a {
                     display: flex;
@@ -51,6 +53,8 @@ body {
                 }
     
                 img {
+                    max-width: 10%;
+                    height: auto;
                     max-height: 30%;
                     width: auto;
                     object-fit: contain;
@@ -60,8 +64,13 @@ body {
             }
     
             .single-option-tag, .multiple-option-tag {
+                display: inline-flex;
+                align-items: center;
+                padding: 0 5px; /* Adjust the padding as needed */
                 border-radius: 20px;
                 transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+                background-color: #f3f3f3;
+                // background-color: red;
             }
 
             .single-option-tag:hover, .multiple-option-tag:hover {
@@ -399,19 +408,18 @@ body {
             @extend %tags_section_template;
 
             //Supplementary code for the above extension
-            .tags-section {
-                align-items: center;
-                padding: 3vw;
-                height: auto;
-                border-radius: 0px 0px 10px 10px;
+            // .tags-section {
+            //     align-items: center;
+            //     padding: 3vw;
+            //     height: auto;
+            //     border-radius: 0px 0px 10px 10px;
 
-                .tag-list {
-                    .single-option-tag, .multiple-option-tag {
-                        background-color: #f3f3f3;
-                        height: 5vh;
-                    }
-                }
-            }
+            //     .tag-list {
+            //         .single-option-tag, .multiple-option-tag {
+            //             height: 5vh;
+            //         }
+            //     }
+            // }
             
     
             // .tags-section {
